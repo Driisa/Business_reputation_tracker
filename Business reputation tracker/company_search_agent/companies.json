@@ -1,0 +1,26 @@
+{
+    "companies": [
+        {
+            "name": "Tesla",
+            "description": "Electric vehicle and clean energy company",
+            "industry": "Automotive and Clean Energy",
+            "country": "United States",
+            "main_services": [
+                "Electric Vehicles", 
+                "Solar Energy"
+            ]
+        },
+        {
+            "name": "Amazon",
+            "description": "Multinational technology and e-commerce company",
+            "industry": "Technology and Retail",
+            "country": "United States",
+            "main_services": [
+                "E-commerce",
+                "Cloud Computing",
+                "Digital Streaming",
+                "Artificial Intelligence"
+            ]
+        }
+    ]
+}

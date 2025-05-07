@@ -1,0 +1,112 @@
+{
+  "results": [
+    {
+      "company": "Tesla",
+      "count": 5,
+      "items": [
+        {
+          "title": "Democratic Rep. Jasmine Crockett accused of \u2018abusing her power\u2019 at airport after she cut passengers in wheelchairs",
+          "link": "https://nypost.com/2025/05/06/us-news/jasmine-crockett-accused-of-abusing-her-power-at-airport-after-she-cut-passengers-in-wheelchairs/",
+          "snippet": "Democratic Rep. Jasmine Crockett is being blasted on social media for jumping ahead of two passengers in wheelchairs while taking a flight out of Hartsfield-Jackson Atlanta International Airport over the weekend.",
+          "source": "New York Post",
+          "published": "2025-05-06T18:27:16Z",
+          "type": "news"
+        },
+        {
+          "title": "Lectric XP4 e-bikes open for preorder with up to $365 in free gear from $999, Bluetti Mother\u2019s Day Sale takes up to 48% off units, more",
+          "link": "http://electrek.co/2025/05/06/lectric-xp4-e-bikes-bluetti-more/",
+          "snippet": "We\u2019ve got unexpected news and deals headlining today\u2019s Green Deals, as Lectric has not only introduced the world to its new XP4 and XP4 750 e-bikes, but has also launched them for preorder with up to $365 in free gear joining them, which you can check out bel\u2026",
+          "source": "Electrek",
+          "published": "2025-05-06T18:25:39Z",
+          "type": "news"
+        },
+        {
+          "title": "Amazon's Zoox robotaxi unit issues software recall after recent Las Vegas crash",
+          "link": "https://www.nbcnews.com/business/business-news/amazons-zoox-robotaxi-unit-issues-software-recall-recent-las-vegas-cra-rcna205168",
+          "snippet": "Amazon\u2019s Zoox issued a software recall for 270 of its robotaxis after a crash in Las Vegas last month, the company said Tuesday.",
+          "source": "NBC News",
+          "published": "2025-05-06T18:06:30Z",
+          "type": "news"
+        },
+        {
+          "title": "Driver suddenly stops in middle of highway, causes multi-car crash, then leaves: video",
+          "link": "https://www.foxnews.com/us/driver-suddenly-stops-middle-highway-causes-multi-car-crash-leaves-video",
+          "snippet": "A red van was caught on footage leaving the scene of a multi-vehicle car crash after stopping in the middle of the highway to turn into a missed exit.",
+          "source": "Fox News",
+          "published": "2025-05-06T18:06:09Z",
+          "type": "news"
+        },
+        {
+          "title": "Musk: What did he accomplish with DOGE?",
+          "link": "https://theweek.com/politics/musk-accomplish-doge-trump-federal-government",
+          "snippet": "The billionaire steps back from DOGE after slashing federal jobs and services",
+          "source": "The Week Magazine",
+          "published": "2025-05-06T18:03:51Z",
+          "type": "news"
+        }
+      ]
+    },
+    {
+      "company": "Amazon",
+      "count": 5,
+      "items": [
+        {
+          "title": "Amazon - 8Bitdo Ultimate 2C Wired Controller for Windows PC and Android $14.64",
+          "link": "https://www.dealcatcher.com/?offer=998444327&utm_source=rss",
+          "snippet": "Over $500 million saved... and counting. Save money at your favorite stores including Amazon, Kohls, Target, and thousands more. Updated daily!",
+          "source": "Dealcatcher.com",
+          "published": "2025-05-06T18:30:14Z",
+          "type": "news"
+        },
+        {
+          "title": "WATCH: Trump Says Gavin Newsom Can't Win for President After Bullet Train Failure, Fires",
+          "link": "https://www.breitbart.com/economy/2025/05/06/trump-gavin-newsom-cant-win-for-president-after-train-failure-fires/",
+          "snippet": "President Donald Trump said Tuesday that California Governor Gavin Newsom (D) could never be elected president because of his failures on the costly, unfinished high-speed rail project and wildfires in his state.\nThe post WATCH: Trump Says Gavin Newsom Can\u2019t \u2026",
+          "source": "Breitbart News",
+          "published": "2025-05-06T18:29:03Z",
+          "type": "news"
+        },
+        {
+          "title": "Amazon India bets big on Tier-2, Tier-3 cities",
+          "link": "https://www.thehindubusinessline.com/companies/amazon-india-bets-big-on-tier-2-tier-3-cities/article69545605.ece",
+          "snippet": "Amazon's India head reveals focus on Tier-2 and Tier-3 cities, aggressive quick commerce expansion, and $15 billion investment commitment.",
+          "source": "BusinessLine",
+          "published": "2025-05-06T18:29:00Z",
+          "type": "news"
+        },
+        {
+          "title": "Amazon - Portable Air Compressor for Car Tires $13.99",
+          "link": "https://www.dealcatcher.com/?offer=998444326&utm_source=rss",
+          "snippet": "Over $500 million saved... and counting. Save money at your favorite stores including Amazon, Kohls, Target, and thousands more. Updated daily!",
+          "source": "Dealcatcher.com",
+          "published": "2025-05-06T18:28:58Z",
+          "type": "news"
+        },
+        {
+          "title": "Lectric XP4 e-bikes open for preorder with up to $365 in free gear from $999, Bluetti Mother\u2019s Day Sale takes up to 48% off units, more",
+          "link": "http://electrek.co/2025/05/06/lectric-xp4-e-bikes-bluetti-more/",
+          "snippet": "We\u2019ve got unexpected news and deals headlining today\u2019s Green Deals, as Lectric has not only introduced the world to its new XP4 and XP4 750 e-bikes, but has also launched them for preorder with up to $365 in free gear joining them, which you can check out bel\u2026",
+          "source": "Electrek",
+          "published": "2025-05-06T18:25:39Z",
+          "type": "news"
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "company_counts": {
+      "Tesla": 5,
+      "Amazon": 5
+    },
+    "top_sources": {
+      "Electrek": 2,
+      "Dealcatcher.com": 2,
+      "New York Post": 1,
+      "NBC News": 1,
+      "Fox News": 1,
+      "The Week Magazine": 1,
+      "Breitbart News": 1,
+      "BusinessLine": 1
+    }
+  }
+}

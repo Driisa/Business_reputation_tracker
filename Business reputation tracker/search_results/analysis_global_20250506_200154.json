@@ -1,0 +1,35 @@
+{
+    "companies": {
+        "Tesla": {
+            "mention_count": 5,
+            "top_sources": {
+                "www.tiktok.com": 2,
+                "cleantechnica.com": 1,
+                "www.nytimes.com": 1,
+                "www.marriott.com": 1
+            }
+        },
+        "Vestas": {
+            "mention_count": 5,
+            "top_sources": {
+                "www.seek.com.au": 1,
+                "m.economictimes.com": 1,
+                "www.rigzone.com": 1,
+                "www.ambitionbox.com": 1,
+                "invezz.com": 1
+            }
+        }
+    },
+    "total_mentions": 10,
+    "top_sources": {
+        "www.tiktok.com": 2,
+        "cleantechnica.com": 1,
+        "www.nytimes.com": 1,
+        "www.marriott.com": 1,
+        "www.seek.com.au": 1,
+        "m.economictimes.com": 1,
+        "www.rigzone.com": 1,
+        "www.ambitionbox.com": 1,
+        "invezz.com": 1
+    }
+}

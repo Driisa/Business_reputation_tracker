@@ -1,0 +1,107 @@
+{
+    "search_date": "2025-05-06T20:01:54.729418",
+    "region": "global",
+    "language": "en",
+    "time_range": "last_7_days",
+    "total_companies": 2,
+    "companies_with_results": 2,
+    "execution_time_sec": 2.0,
+    "api_calls": {
+        "google": 2,
+        "openai": 2
+    },
+    "results": [
+        {
+            "company": "Tesla",
+            "search_date": "2025-05-06T20:01:54.124794",
+            "time_range": "last_7_days",
+            "results_count": 5,
+            "mentions": [
+                {
+                    "title": "Tina Casey, Author at CleanTechnica",
+                    "link": "https://cleantechnica.com/author/seawolf/",
+                    "snippet": "18 hours ago ... Electric Car Reviews · Exclusives · Power · Transport · Electric Cars ... More Headaches For Tesla: Mack Trucks Muscles Into The Class 8 Electric Truck Market.",
+                    "published_date": "",
+                    "source": "cleantechnica.com"
+                },
+                {
+                    "title": "Electric and Hybrid Vehicles - The New York Times",
+                    "link": "https://www.nytimes.com/topic/subject/electric-and-hybrid-vehicles",
+                    "snippet": "18 hours ago ... Elon Musk's alliance with President Trump has prompted Democratic lawmakers to propose stripping Tesla of its ability to sell its cars directly to consumers.",
+                    "published_date": "",
+                    "source": "www.nytimes.com"
+                },
+                {
+                    "title": "Tesla Carooks Like India Garbage Truck | TikTok",
+                    "link": "https://www.tiktok.com/discover/tesla-carooks-like-india-garbage-truck",
+                    "snippet": "8 hours ago ... ... electric vehicles, Elon Musk innovation, futuristic car design ... Tesla Truck features debate, electric vehicle innovation, Tesla Truck review, automotive ...",
+                    "published_date": "",
+                    "source": "www.tiktok.com"
+                },
+                {
+                    "title": "San Antonio Resort | JW Marriott San Antonio",
+                    "link": "https://www.marriott.com/en-us/hotels/satjw-jw-marriott-san-antonio-hill-country-resort-and-spa/overview/",
+                    "snippet": "18 hours ago ... The resort does have Tesla chargers, but please note that charging capacity is limited and available on a first-come, first-serve basis. Tesla owners must ...",
+                    "published_date": "",
+                    "source": "www.marriott.com"
+                },
+                {
+                    "title": "Serbian Dumpster Tesla Truck | TikTok",
+                    "link": "https://www.tiktok.com/discover/serbian-dumpster-tesla-truck",
+                    "snippet": "11 hours ago ... Tesla Cybertruck features, American electric vehicles, Elon Musk innovation, futuristic car ... electric vehicle technology, Tesla market impact, car ...",
+                    "published_date": "",
+                    "source": "www.tiktok.com"
+                }
+            ],
+            "search_engine": "google",
+            "region": "global",
+            "cache_time": "2025-05-06T20:01:54.124794"
+        },
+        {
+            "company": "Vestas",
+            "search_date": "2025-05-06T20:01:54.726420",
+            "time_range": "last_7_days",
+            "results_count": 5,
+            "mentions": [
+                {
+                    "title": "Electrical Jobs in Burnie TAS 7320 - May 2025 | SEEK",
+                    "link": "https://www.seek.com.au/electrical-jobs/in-Burnie-TAS-7320",
+                    "snippet": "18 hours ago ... Vestas are seeking a qualified technician to join our team at Musselroe Wind Farm. ... A reputation for exceptional service for 30 years. An opportunity for ...",
+                    "published_date": "",
+                    "source": "www.seek.com.au"
+                },
+                {
+                    "title": "European shares hold ground as investors assess earnings; focus ...",
+                    "link": "https://m.economictimes.com/markets/stocks/news/european-shares-hold-ground-as-investors-assess-earnings-focus-on-fed-tariff-updates/articleshow/120925078.cms",
+                    "snippet": "10 hours ago ... Among individual stocks, Vestas rose about 5% after the wind turbine maker reported an unexpected operating profit for the first quarter. Philips fell 1.4 ...",
+                    "published_date": "",
+                    "source": "m.economictimes.com"
+                },
+                {
+                    "title": "Search Oil & Gas Jobs | Rigzone",
+                    "link": "https://www.rigzone.com/oil/jobs/search/",
+                    "snippet": "18 hours ago ... ... wind farm performance standards while maintaining turbine scheduled service timeframes Provide ... ... Vestas Wind Technology, Inc. Technician II Bush Ranch, CO - ...",
+                    "published_date": "",
+                    "source": "www.rigzone.com"
+                },
+                {
+                    "title": "Waaree Energies Reviews by 600+ Employees | Rated 4.0/5 ...",
+                    "link": "https://www.ambitionbox.com/reviews/waaree-energies-reviews",
+                    "snippet": "18 hours ago ... Adani Power Reviews. 3.9. • 2k reviews. ReNew Reviews. 4.2. • 1.2k reviews. Adani Green Energy Reviews. 4.1. • 1.2k reviews. Vestas Reviews.",
+                    "published_date": "",
+                    "source": "www.ambitionbox.com"
+                },
+                {
+                    "title": "Europe markets open: Stocks look lower as investors await earnings ...",
+                    "link": "https://invezz.com/news/2025/05/06/europe-markets-open-stocks-set-for-lower-start-focus-shifts-to-earnings-from-vestas-axa-ferrari/",
+                    "snippet": "10 hours ago ... ... renewable energy stocks Best short term stocks Best healthcare ... Wind turbine giant Vestas unable to absorb tariff costs, predicts price hikes in the US.",
+                    "published_date": "2025-05-06T07:31:12+00:00",
+                    "source": "invezz.com"
+                }
+            ],
+            "search_engine": "google",
+            "region": "global",
+            "cache_time": "2025-05-06T20:01:54.726420"
+        }
+    ]
+}

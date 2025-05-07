@@ -1,0 +1,107 @@
+{
+    "search_date": "2025-05-06T20:02:58.379237",
+    "region": "global",
+    "language": "en",
+    "time_range": "last_7_days",
+    "total_companies": 2,
+    "companies_with_results": 2,
+    "execution_time_sec": 2.95,
+    "api_calls": {
+        "google": 2,
+        "openai": 2
+    },
+    "results": [
+        {
+            "company": "Tesla",
+            "search_date": "2025-05-06T20:02:57.343233",
+            "time_range": "last_7_days",
+            "results_count": 5,
+            "mentions": [
+                {
+                    "title": "Q1 Crisis Review: Perma-Crisis Born Out of Perma-Chaos",
+                    "link": "https://www.provokemedia.com/latest/article/q1-crisis-review-perma-crisis-born-out-of-perma-chaos",
+                    "snippet": "9 hours ago ... “Perhaps given that Tesla has so much been in the public eye and Elon Musk has been caught up in the news headlines in a less than positive light, that ...",
+                    "published_date": "2025-05-06T08:57:42",
+                    "source": "www.provokemedia.com"
+                },
+                {
+                    "title": "BYD Sealion 7 Races Ahead in Australia, Outpaces Tesla Model Y ...",
+                    "link": "https://opentools.ai/news/byd-sealion-7-races-ahead-in-australia-outpaces-tesla-model-y-as-best-selling-ev",
+                    "snippet": "5 hours ago ... Moreover, the effect of global factors, including Tesla's reputation challenges due to public perceptions of its CEO, Elon Musk, may have also subtly ...",
+                    "published_date": "",
+                    "source": "opentools.ai"
+                },
+                {
+                    "title": "Investor's Business Daily | Stock News and Stock Market Analysis ...",
+                    "link": "https://www.investors.com/",
+                    "snippet": "18 hours ago ... Is Tesla Stock A Buy Or A Sell With Elon Musk Stepping Back From The Trump ... Dow Jones Falls 200 Points On Trump Tariff News; Nvidia, Tesla Slide. AAPL.",
+                    "published_date": "",
+                    "source": "www.investors.com"
+                },
+                {
+                    "title": "Business - The New York Times",
+                    "link": "https://www.nytimes.com/section/business",
+                    "snippet": "18 hours ago ... Breaking news and analysis on business and the economy, including the ... No Thanks, Elon Musk. Residents of an upscale enclave outside Austin, Texas ...",
+                    "published_date": "",
+                    "source": "www.nytimes.com"
+                },
+                {
+                    "title": "Campus Review – The latest in higher education news",
+                    "link": "https://www.campusreview.com.au/",
+                    "snippet": "18 hours ago ... Professor Bell on ANU's public perception. Australian National ... Tesla chair to lead research and development review. A Strategic Examination ...",
+                    "published_date": "",
+                    "source": "www.campusreview.com.au"
+                }
+            ],
+            "search_engine": "google",
+            "region": "global",
+            "cache_time": "2025-05-06T20:02:57.343233"
+        },
+        {
+            "company": "Vestas",
+            "search_date": "2025-05-06T20:02:58.376110",
+            "time_range": "last_7_days",
+            "results_count": 5,
+            "mentions": [
+                {
+                    "title": "European shares hold ground as investors assess earnings; focus ...",
+                    "link": "https://m.economictimes.com/markets/stocks/news/european-shares-hold-ground-as-investors-assess-earnings-focus-on-fed-tariff-updates/articleshow/120925078.cms",
+                    "snippet": "10 hours ago ... NewSmart Alerts NewWatchlist Today's Paper Recos Stocks Screeners Stream · News ... Among individual stocks, Vestas rose about 5% after the wind turbine maker ...",
+                    "published_date": "",
+                    "source": "m.economictimes.com"
+                },
+                {
+                    "title": "MPBSE.nic.in, Mpbse.mponline.gov.in, MP Board 10th 12th Sarkari ...",
+                    "link": "https://pub1aw3lwg7g.veedil.pl/sport/other-sports/snooker/luca-brecel-world-snooker-championship-35177286.amp",
+                    "snippet": "8 hours ago ... ... News · Education; MPBSE.nic.in, MP Board 10th 12th Result 2025 LIVE ... Vestas unable to absorb tariff costs, predicts price hikes in the US. May 6 ...",
+                    "published_date": "2025-05-06T15:34:29+05:30",
+                    "source": "pub1aw3lwg7g.veedil.pl"
+                },
+                {
+                    "title": "Macau Business: MB-Home",
+                    "link": "https://www.macaubusiness.com/",
+                    "snippet": "18 hours ago ... Wind energy giant Vestas keeps earnings forecast despite tariffs. Load more ... We read on... When AI meets moral decay. February 16, 2025. UTM Comments is a ...",
+                    "published_date": "",
+                    "source": "www.macaubusiness.com"
+                },
+                {
+                    "title": "Malaysia proposes new framework for tokenized capital market ...",
+                    "link": "https://invezz.com/news/2025/05/06/malaysia-proposes-new-framework-for-tokenized-capital-market-products/",
+                    "snippet": "8 hours ago ... Doordash buys Deliveroo for £2.9B: what's behind the global food delivery merger wave? May 6, 2025. Wind turbine giant Vestas unable to absorb tariff costs, ...",
+                    "published_date": "2025-05-06T09:57:58+00:00",
+                    "source": "invezz.com"
+                },
+                {
+                    "title": "APO Group - Africa Newsroom / Press release | The Islamic ...",
+                    "link": "https://www.africa-newsroom.com/press/the-islamic-development-bank-isdb-group-entities-to-host-the-13th-private-sector-forum-in-algiers-algeria-2022-may-2025?lang=en",
+                    "snippet": "7 hours ago ... Vestas, Vestergaard Sàrl, Vey & Associés, VFD Group Plc, VFS Global, Viber, Vice ... The forum will enhance public-private partnerships by strengthening ...",
+                    "published_date": "",
+                    "source": "www.africa-newsroom.com"
+                }
+            ],
+            "search_engine": "google",
+            "region": "global",
+            "cache_time": "2025-05-06T20:02:58.377229"
+        }
+    ]
+}
