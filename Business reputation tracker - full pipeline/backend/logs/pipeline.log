@@ -1,0 +1,674 @@
+2025-05-06 16:04:13,601 - pipeline - INFO - {"timestamp": "2025-05-06T16:04:13.601389", "event_type": "pipeline_start", "data": {}}
+2025-05-06 16:04:13,601 - backend.app.sync_frontend_data - INFO - Starting database watch on: C:\Users\Danie\OneDrive - Aalborg Universitet\8. semester - Kandidat\Semester project\Business reputation tracker\backend\data
+2025-05-06 16:04:13,601 - pipeline - INFO - Initializing databases...
+2025-05-06 16:04:13,601 - backend.app.sync_frontend_data - INFO - Press Ctrl+C to stop watching
+2025-05-06 16:04:13,601 - root - INFO - Initializing databases...
+2025-05-06 16:04:13,601 - backend.app.sync_frontend_data - INFO - Performing manual sync...
+2025-05-06 16:04:13,626 - backend.app.frontend_database - INFO - Database verification successful
+2025-05-06 16:04:13,657 - backend.app.frontend_database - INFO - Database verification successful
+2025-05-06 16:04:13,657 - backend.app.frontend_database - INFO - Both databases initialized and verified successfully
+2025-05-06 16:04:13,670 - backend.app.frontend_database - INFO - Database verification successful
+2025-05-06 16:04:13,672 - root - INFO - Both databases initialized and verified successfully
+2025-05-06 16:04:13,679 - pipeline - INFO - {"timestamp": "2025-05-06T16:04:13.679196", "event_type": "search_start", "data": {}}
+2025-05-06 16:04:13,679 - pipeline - INFO - === Starting Search Agent ===
+2025-05-06 16:04:13,698 - backend.app.frontend_database - INFO - Database sync completed successfully
+2025-05-06 16:04:13,701 - backend.app.sync_frontend_data - INFO - Manual sync completed successfully
+2025-05-06 16:04:17,144 - pipeline - INFO - {"timestamp": "2025-05-06T16:04:17.144530", "event_type": "search_complete", "data": {"results_count": 5}}
+2025-05-06 16:04:17,144 - pipeline - INFO - {"timestamp": "2025-05-06T16:04:17.144530", "event_type": "scrape_start", "data": {}}
+2025-05-06 16:04:17,147 - pipeline - INFO - === Starting Scraping Agent ===
+2025-05-06 16:04:17,593 - pipeline - INFO - {"timestamp": "2025-05-06T16:04:17.593720", "event_type": "scrape_complete", "data": {"results_count": 3}}
+2025-05-06 16:04:17,593 - pipeline - INFO - {"timestamp": "2025-05-06T16:04:17.593720", "event_type": "clean_start", "data": {}}
+2025-05-06 16:04:17,593 - pipeline - INFO - === Starting LLM Cleaning Agent ===
+2025-05-06 16:04:17,616 - backend.agents.LLM_cleaning_agent - INFO - Found 0 articles to clean
+2025-05-06 16:04:17,616 - backend.agents.LLM_cleaning_agent - INFO - Content cleaning completed in 0.00 seconds
+2025-05-06 16:04:17,625 - pipeline - INFO - {"timestamp": "2025-05-06T16:04:17.625020", "event_type": "clean_complete", "data": {"results_count": 3}}
+2025-05-06 16:04:17,626 - pipeline - INFO - {"timestamp": "2025-05-06T16:04:17.626198", "event_type": "analyze_start", "data": {}}
+2025-05-06 16:04:17,626 - pipeline - INFO - === Starting LLM sentiment Agent ===
+2025-05-06 16:04:17,642 - pipeline - INFO - {"timestamp": "2025-05-06T16:04:17.642967", "event_type": "analyze_complete", "data": {"results_count": 3}}
+2025-05-06 16:04:17,643 - pipeline - INFO - {"timestamp": "2025-05-06T16:04:17.643974", "event_type": "sync_start", "data": {}}
+2025-05-06 16:04:17,644 - pipeline - INFO - === Syncing to Frontend Database ===
+2025-05-06 16:04:17,644 - backend.app.sync_frontend_data - INFO - Performing manual sync...
+2025-05-06 16:04:17,645 - backend.app.frontend_database - INFO - Database verification successful
+2025-05-06 16:04:17,694 - backend.app.frontend_database - INFO - Database sync completed successfully
+2025-05-06 16:04:17,694 - backend.app.sync_frontend_data - INFO - Manual sync completed successfully
+2025-05-06 16:04:17,694 - pipeline - INFO - {"timestamp": "2025-05-06T16:04:17.694424", "event_type": "sync_complete", "data": {}}
+2025-05-06 16:04:17,694 - backend.app.frontend_database - INFO - Database verification successful
+2025-05-06 16:04:17,694 - pipeline - INFO - {"timestamp": "2025-05-06T16:04:17.694424", "event_type": "pipeline_complete", "data": {"execution_time": 4.093034505844116, "search_results": 5, "scraped_content": 3, "cleaned_content": 3, "analyzed_content": 3}}
+2025-05-06 16:10:41,637 - pipeline - INFO - {"timestamp": "2025-05-06T16:10:41.637189", "event_type": "pipeline_start", "data": {}}
+2025-05-06 16:10:41,637 - backend.app.sync_frontend_data - INFO - Starting database watch on: C:\Users\Danie\OneDrive - Aalborg Universitet\8. semester - Kandidat\Semester project\Business reputation tracker\backend\data
+2025-05-06 16:10:41,638 - pipeline - INFO - Initializing databases...
+2025-05-06 16:10:41,638 - backend.app.sync_frontend_data - INFO - Press Ctrl+C to stop watching
+2025-05-06 16:10:41,638 - root - INFO - Initializing databases...
+2025-05-06 16:10:41,640 - backend.app.sync_frontend_data - INFO - Performing manual sync...
+2025-05-06 16:10:41,659 - backend.app.frontend_database - INFO - Database verification successful
+2025-05-06 16:10:41,682 - backend.app.frontend_database - INFO - Removed company from frontend database: tesla
+2025-05-06 16:10:41,682 - backend.app.frontend_database - INFO - Database verification successful
+2025-05-06 16:10:41,682 - backend.app.frontend_database - INFO - Both databases initialized and verified successfully
+2025-05-06 16:10:41,696 - backend.app.frontend_database - INFO - Removed topic insight from frontend database: Tesla Owner’s Day event
+2025-05-06 16:10:41,697 - backend.app.frontend_database - INFO - Database verification successful
+2025-05-06 16:10:41,698 - backend.app.frontend_database - INFO - Removed topic insight from frontend database: Tesla Center Bern
+2025-05-06 16:10:41,698 - root - INFO - Both databases initialized and verified successfully
+2025-05-06 16:10:41,699 - backend.app.frontend_database - INFO - Removed topic insight from frontend database: Tesla Advisors
+2025-05-06 16:10:41,700 - pipeline - INFO - {"timestamp": "2025-05-06T16:10:41.700306", "event_type": "search_start", "data": {}}
+2025-05-06 16:10:41,700 - backend.app.frontend_database - INFO - Removed topic insight from frontend database: Tesla Service Team
+2025-05-06 16:10:41,700 - pipeline - INFO - === Starting Search Agent ===
+2025-05-06 16:10:41,702 - backend.app.frontend_database - INFO - Removed topic insight from frontend database: Customer engagement
+2025-05-06 16:10:41,702 - backend.app.frontend_database - INFO - Removed topic insight from frontend database: Vehicle ownership experience
+2025-05-06 16:10:41,704 - backend.app.frontend_database - INFO - Removed topic insight from frontend database: Tesla, Inc. stock performance
+2025-05-06 16:10:41,709 - backend.app.frontend_database - INFO - Removed topic insight from frontend database: Market volatility and trends in 2025
+2025-05-06 16:10:41,712 - backend.app.frontend_database - INFO - Removed topic insight from frontend database: AI adoption and ChatGPT's role in investment advice
+2025-05-06 16:10:41,713 - backend.app.frontend_database - INFO - Removed topic insight from frontend database: Investor behavior among Millennials and Gen Z
+2025-05-06 16:10:41,714 - backend.app.frontend_database - INFO - Removed topic insight from frontend database: Market cycle patterns and historical returns
+2025-05-06 16:10:41,716 - backend.app.frontend_database - INFO - Removed topic insight from frontend database: Debate over AI accuracy and reliability in stock prediction
+2025-05-06 16:10:41,718 - backend.app.frontend_database - INFO - Removed topic insight from frontend database: Tesla vehicle vandalism
+2025-05-06 16:10:41,718 - backend.app.frontend_database - INFO - Removed topic insight from frontend database: Potential politically motivated attack
+2025-05-06 16:10:41,719 - backend.app.frontend_database - INFO - Removed topic insight from frontend database: FBI warning about targeted crimes against Tesla
+2025-05-06 16:10:41,720 - backend.app.frontend_database - INFO - Removed topic insight from frontend database: Local police response and lack of observed increase in crimes
+2025-05-06 16:10:41,721 - backend.app.frontend_database - INFO - Database sync completed successfully
+2025-05-06 16:10:41,725 - backend.app.sync_frontend_data - INFO - Manual sync completed successfully
+2025-05-06 16:11:04,466 - backend.app.sync_frontend_data - INFO - Database change detected. Starting sync...
+2025-05-06 16:11:04,483 - backend.app.frontend_database - INFO - Database verification successful
+2025-05-06 16:11:04,488 - backend.app.frontend_database - INFO - Database sync completed successfully
+2025-05-06 16:11:04,495 - backend.app.sync_frontend_data - INFO - Sync completed successfully
+2025-05-06 16:11:38,768 - pipeline - INFO - {"timestamp": "2025-05-06T16:11:38.768847", "event_type": "search_complete", "data": {"results_count": 0}}
+2025-05-06 16:11:38,773 - pipeline - WARNING - No search results found. Pipeline may not proceed as expected.
+2025-05-06 16:11:38,773 - pipeline - INFO - {"timestamp": "2025-05-06T16:11:38.773447", "event_type": "scrape_start", "data": {}}
+2025-05-06 16:11:38,773 - pipeline - INFO - === Starting Scraping Agent ===
+2025-05-06 16:11:38,779 - pipeline - INFO - {"timestamp": "2025-05-06T16:11:38.773447", "event_type": "scrape_complete", "data": {"results_count": 0}}
+2025-05-06 16:11:38,780 - pipeline - WARNING - No content was scraped. Pipeline may not proceed as expected.
+2025-05-06 16:11:38,780 - pipeline - INFO - {"timestamp": "2025-05-06T16:11:38.780519", "event_type": "clean_start", "data": {}}
+2025-05-06 16:11:38,781 - pipeline - INFO - === Starting LLM Cleaning Agent ===
+2025-05-06 16:11:38,801 - cleaner - INFO - Starting content cleaning process
+2025-05-06 16:11:38,811 - backend.agents.LLM_cleaning_agent - INFO - Found 0 articles to clean
+2025-05-06 16:11:38,812 - backend.agents.LLM_cleaning_agent - INFO - Content cleaning completed in 0.00 seconds
+2025-05-06 16:11:38,812 - pipeline - INFO - {"timestamp": "2025-05-06T16:11:38.812777", "event_type": "clean_complete", "data": {"results_count": 0}}
+2025-05-06 16:11:38,812 - cleaner - INFO - Content cleaning completed. Processed 0 articles.
+2025-05-06 16:11:38,812 - pipeline - WARNING - No content was cleaned. Pipeline may not proceed as expected.
+2025-05-06 16:11:38,812 - cleaner - WARNING - No content was cleaned. Pipeline may not proceed as expected.
+2025-05-06 16:11:38,819 - pipeline - INFO - {"timestamp": "2025-05-06T16:11:38.819383", "event_type": "analyze_start", "data": {}}
+2025-05-06 16:11:38,819 - pipeline - INFO - === Starting LLM sentiment Agent ===
+2025-05-06 16:11:38,836 - pipeline - INFO - {"timestamp": "2025-05-06T16:11:38.836287", "event_type": "analyze_complete", "data": {"results_count": 0}}
+2025-05-06 16:11:38,836 - pipeline - WARNING - No content was analyzed. Pipeline may not proceed as expected.
+2025-05-06 16:11:38,837 - pipeline - INFO - {"timestamp": "2025-05-06T16:11:38.837903", "event_type": "sync_start", "data": {}}
+2025-05-06 16:11:38,838 - pipeline - INFO - === Syncing to Frontend Database ===
+2025-05-06 16:11:38,839 - backend.app.sync_frontend_data - INFO - Performing manual sync...
+2025-05-06 16:11:38,843 - backend.app.frontend_database - INFO - Database verification successful
+2025-05-06 16:11:38,848 - backend.app.frontend_database - INFO - Database sync completed successfully
+2025-05-06 16:11:38,848 - backend.app.sync_frontend_data - INFO - Manual sync completed successfully
+2025-05-06 16:11:38,855 - pipeline - INFO - {"timestamp": "2025-05-06T16:11:38.855678", "event_type": "sync_complete", "data": {}}
+2025-05-06 16:11:38,857 - backend.app.frontend_database - INFO - Database verification successful
+2025-05-06 16:11:38,859 - pipeline - INFO - {"timestamp": "2025-05-06T16:11:38.859693", "event_type": "pipeline_complete", "data": {"execution_time": 57.22250461578369, "search_results": 0, "scraped_content": 0, "cleaned_content": 0, "analyzed_content": 0}}
+2025-05-06 16:13:00,610 - pipeline - INFO - {"timestamp": "2025-05-06T16:13:00.610676", "event_type": "pipeline_start", "data": {}}
+2025-05-06 16:13:00,610 - backend.app.sync_frontend_data - INFO - Starting database watch on: C:\Users\Danie\OneDrive - Aalborg Universitet\8. semester - Kandidat\Semester project\Business reputation tracker\backend\data
+2025-05-06 16:13:00,610 - pipeline - INFO - Initializing databases...
+2025-05-06 16:13:00,610 - backend.app.sync_frontend_data - INFO - Press Ctrl+C to stop watching
+2025-05-06 16:13:00,610 - root - INFO - Initializing databases...
+2025-05-06 16:13:00,610 - backend.app.sync_frontend_data - INFO - Performing manual sync...
+2025-05-06 16:13:00,640 - backend.app.frontend_database - INFO - Database verification successful
+2025-05-06 16:13:00,640 - backend.app.frontend_database - INFO - Both databases initialized and verified successfully
+2025-05-06 16:13:00,641 - backend.app.frontend_database - INFO - Database verification successful
+2025-05-06 16:13:00,641 - root - INFO - Both databases initialized and verified successfully
+2025-05-06 16:13:00,641 - pipeline - INFO - {"timestamp": "2025-05-06T16:13:00.641614", "event_type": "search_start", "data": {}}
+2025-05-06 16:13:00,641 - pipeline - INFO - === Starting Search Agent ===
+2025-05-06 16:13:00,659 - backend.app.frontend_database - INFO - Database verification successful
+2025-05-06 16:13:00,672 - backend.app.frontend_database - INFO - Removed company from frontend database: Arla
+2025-05-06 16:13:00,684 - backend.app.frontend_database - INFO - Database sync completed successfully
+2025-05-06 16:13:00,685 - backend.app.sync_frontend_data - INFO - Manual sync completed successfully
+2025-05-06 16:13:01,741 - backend.app.sync_frontend_data - INFO - Database change detected. Starting sync...
+2025-05-06 16:13:01,756 - backend.app.frontend_database - INFO - Database verification successful
+2025-05-06 16:13:01,764 - backend.app.frontend_database - INFO - Database sync completed successfully
+2025-05-06 16:13:01,765 - backend.app.sync_frontend_data - INFO - Sync completed successfully
+2025-05-06 16:13:29,045 - pipeline - INFO - {"timestamp": "2025-05-06T16:13:29.045823", "event_type": "search_complete", "data": {"results_count": 15}}
+2025-05-06 16:13:29,045 - pipeline - INFO - {"timestamp": "2025-05-06T16:13:29.045823", "event_type": "scrape_start", "data": {}}
+2025-05-06 16:13:29,045 - pipeline - INFO - === Starting Scraping Agent ===
+2025-05-06 16:14:02,206 - backend.app.sync_frontend_data - INFO - Database change detected. Starting sync...
+2025-05-06 16:14:02,212 - backend.app.frontend_database - INFO - Database verification successful
+2025-05-06 16:14:02,222 - backend.app.frontend_database - INFO - Database sync completed successfully
+2025-05-06 16:14:02,222 - backend.app.sync_frontend_data - INFO - Sync completed successfully
+2025-05-06 16:14:10,007 - pipeline - INFO - {"timestamp": "2025-05-06T16:14:10.007318", "event_type": "scrape_complete", "data": {"results_count": 14}}
+2025-05-06 16:14:10,010 - pipeline - INFO - {"timestamp": "2025-05-06T16:14:10.010223", "event_type": "clean_start", "data": {}}
+2025-05-06 16:14:10,012 - pipeline - INFO - === Starting LLM Cleaning Agent ===
+2025-05-06 16:14:10,048 - cleaner - INFO - Starting content cleaning process
+2025-05-06 16:14:10,052 - backend.agents.LLM_cleaning_agent - INFO - Found 14 articles to clean
+2025-05-06 16:14:10,052 - backend.agents.LLM_cleaning_agent - INFO - Processing batch 1/2
+2025-05-06 16:14:10,058 - backend.agents.LLM_cleaning_agent - INFO - Starting single-pass LLM processing...
+2025-05-06 16:14:10,184 - backend.agents.LLM_cleaning_agent - INFO - Starting single-pass LLM processing...
+2025-05-06 16:14:10,184 - backend.agents.LLM_cleaning_agent - INFO - Starting single-pass LLM processing...
+2025-05-06 16:14:10,184 - backend.agents.LLM_cleaning_agent - INFO - Starting single-pass LLM processing...
+2025-05-06 16:14:10,196 - backend.agents.LLM_cleaning_agent - INFO - Starting single-pass LLM processing...
+2025-05-06 16:14:10,202 - backend.agents.LLM_cleaning_agent - INFO - Starting single-pass LLM processing...
+2025-05-06 16:14:10,209 - backend.agents.LLM_cleaning_agent - INFO - Starting single-pass LLM processing...
+2025-05-06 16:14:10,214 - backend.agents.LLM_cleaning_agent - INFO - Starting single-pass LLM processing...
+2025-05-06 16:14:10,218 - backend.agents.LLM_cleaning_agent - INFO - Starting single-pass LLM processing...
+2025-05-06 16:14:10,224 - backend.agents.LLM_cleaning_agent - INFO - Starting single-pass LLM processing...
+2025-05-06 16:14:13,045 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-06 16:14:13,914 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-06 16:14:14,119 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-06 16:14:15,136 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-06 16:14:15,686 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-06 16:14:16,426 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-06 16:14:16,649 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-06 16:14:16,891 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-06 16:14:17,029 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-06 16:14:17,911 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-06 16:14:17,982 - backend.agents.LLM_cleaning_agent - INFO - Progress: 50.00% (10/14 successful)
+2025-05-06 16:14:17,984 - backend.agents.LLM_cleaning_agent - INFO - Processing batch 2/2
+2025-05-06 16:14:17,986 - backend.agents.LLM_cleaning_agent - INFO - Starting single-pass LLM processing...
+2025-05-06 16:14:17,991 - backend.agents.LLM_cleaning_agent - INFO - Starting single-pass LLM processing...
+2025-05-06 16:14:17,998 - backend.agents.LLM_cleaning_agent - INFO - Starting single-pass LLM processing...
+2025-05-06 16:14:18,003 - backend.agents.LLM_cleaning_agent - INFO - Starting single-pass LLM processing...
+2025-05-06 16:14:22,791 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-06 16:14:23,138 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-06 16:14:23,466 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-06 16:14:24,125 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-06 16:14:24,167 - backend.agents.LLM_cleaning_agent - INFO - Progress: 100.00% (14/14 successful)
+2025-05-06 16:14:24,167 - backend.agents.LLM_cleaning_agent - INFO - Content cleaning completed in 14.12 seconds
+2025-05-06 16:14:24,172 - pipeline - INFO - {"timestamp": "2025-05-06T16:14:24.172349", "event_type": "clean_complete", "data": {"results_count": 14}}
+2025-05-06 16:14:24,172 - cleaner - INFO - Content cleaning completed. Processed 14 articles.
+2025-05-06 16:14:24,175 - pipeline - INFO - {"timestamp": "2025-05-06T16:14:24.175528", "event_type": "analyze_start", "data": {}}
+2025-05-06 16:14:24,175 - pipeline - INFO - === Starting LLM sentiment Agent ===
+2025-05-06 16:14:25,561 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-06 16:14:27,146 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-06 16:14:28,526 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-06 16:14:29,753 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-06 16:14:31,589 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-06 16:14:33,847 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-06 16:14:35,521 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-06 16:14:37,107 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-06 16:14:38,913 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-06 16:14:42,892 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-06 16:14:44,605 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-06 16:14:48,242 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-06 16:14:49,987 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-06 16:14:53,609 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-06 16:14:53,640 - pipeline - INFO - {"timestamp": "2025-05-06T16:14:53.640466", "event_type": "analyze_complete", "data": {"results_count": 14}}
+2025-05-06 16:14:53,640 - pipeline - INFO - {"timestamp": "2025-05-06T16:14:53.640466", "event_type": "sync_start", "data": {}}
+2025-05-06 16:14:53,640 - pipeline - INFO - === Syncing to Frontend Database ===
+2025-05-06 16:14:53,640 - backend.app.sync_frontend_data - INFO - Performing manual sync...
+2025-05-06 16:14:53,648 - backend.app.frontend_database - INFO - Database verification successful
+2025-05-06 16:14:53,727 - backend.app.frontend_database - INFO - Database sync completed successfully
+2025-05-06 16:14:53,728 - backend.app.sync_frontend_data - INFO - Manual sync completed successfully
+2025-05-06 16:14:53,728 - pipeline - INFO - {"timestamp": "2025-05-06T16:14:53.728860", "event_type": "sync_complete", "data": {}}
+2025-05-06 16:14:53,732 - backend.app.frontend_database - INFO - Database verification successful
+2025-05-06 16:14:53,733 - pipeline - INFO - {"timestamp": "2025-05-06T16:14:53.733957", "event_type": "pipeline_complete", "data": {"execution_time": 113.12328100204468, "search_results": 15, "scraped_content": 14, "cleaned_content": 14, "analyzed_content": 14}}
+2025-05-06 16:16:42,763 - root - INFO - Initializing databases...
+2025-05-06 16:16:42,763 - backend.app.sync_frontend_data - INFO - Starting database watch on: C:\Users\Danie\OneDrive - Aalborg Universitet\8. semester - Kandidat\Semester project\Business reputation tracker\backend\data
+2025-05-06 16:16:42,763 - backend.app.sync_frontend_data - INFO - Press Ctrl+C to stop watching
+2025-05-06 16:16:42,763 - backend.app.sync_frontend_data - INFO - Performing manual sync...
+2025-05-06 16:16:42,788 - backend.app.frontend_database - INFO - Database verification successful
+2025-05-06 16:16:42,822 - backend.app.frontend_database - INFO - Database verification successful
+2025-05-06 16:16:42,824 - backend.app.frontend_database - INFO - Both databases initialized and verified successfully
+2025-05-06 16:16:42,824 - backend.app.frontend_database - INFO - Database verification successful
+2025-05-06 16:16:42,834 - root - INFO - Both databases initialized and verified successfully
+2025-05-06 16:16:42,926 - backend.app.frontend_database - INFO - Database sync completed successfully
+2025-05-06 16:16:42,926 - backend.app.sync_frontend_data - INFO - Manual sync completed successfully
+2025-05-06 16:16:46,726 - backend.app.sync_frontend_data - INFO - Database change detected. Starting sync...
+2025-05-06 16:16:46,745 - backend.app.frontend_database - INFO - Database verification successful
+2025-05-06 16:16:46,819 - backend.app.frontend_database - INFO - Database sync completed successfully
+2025-05-06 16:16:46,820 - backend.app.sync_frontend_data - INFO - Sync completed successfully
+2025-05-06 16:17:46,976 - backend.app.sync_frontend_data - INFO - Database change detected. Starting sync...
+2025-05-06 16:17:46,977 - backend.app.frontend_database - INFO - Database verification successful
+2025-05-06 16:17:47,055 - backend.app.frontend_database - INFO - Database sync completed successfully
+2025-05-06 16:17:47,056 - backend.app.sync_frontend_data - INFO - Sync completed successfully
+2025-05-06 16:18:13,019 - backend.agents.LLM_cleaning_agent - INFO - Found 11 articles to clean
+2025-05-06 16:18:13,019 - backend.agents.LLM_cleaning_agent - INFO - Processing batch 1/2
+2025-05-06 16:18:13,019 - backend.agents.LLM_cleaning_agent - INFO - Starting single-pass LLM processing...
+2025-05-06 16:18:13,129 - backend.agents.LLM_cleaning_agent - INFO - Starting single-pass LLM processing...
+2025-05-06 16:18:13,134 - backend.agents.LLM_cleaning_agent - INFO - Starting single-pass LLM processing...
+2025-05-06 16:18:13,139 - backend.agents.LLM_cleaning_agent - INFO - Starting single-pass LLM processing...
+2025-05-06 16:18:13,141 - backend.agents.LLM_cleaning_agent - INFO - Starting single-pass LLM processing...
+2025-05-06 16:18:13,141 - backend.agents.LLM_cleaning_agent - INFO - Starting single-pass LLM processing...
+2025-05-06 16:18:13,151 - backend.agents.LLM_cleaning_agent - INFO - Starting single-pass LLM processing...
+2025-05-06 16:18:13,153 - backend.agents.LLM_cleaning_agent - INFO - Starting single-pass LLM processing...
+2025-05-06 16:18:13,162 - backend.agents.LLM_cleaning_agent - INFO - Starting single-pass LLM processing...
+2025-05-06 16:18:13,164 - backend.agents.LLM_cleaning_agent - INFO - Starting single-pass LLM processing...
+2025-05-06 16:18:15,552 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-06 16:18:15,829 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-06 16:18:18,039 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-06 16:18:18,082 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-06 16:18:18,511 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-06 16:18:19,185 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-06 16:18:19,915 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-06 16:18:21,242 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-06 16:18:22,653 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-06 16:18:26,223 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-06 16:18:26,274 - backend.agents.LLM_cleaning_agent - INFO - Progress: 50.00% (10/11 successful)
+2025-05-06 16:18:26,274 - backend.agents.LLM_cleaning_agent - INFO - Processing batch 2/2
+2025-05-06 16:18:26,274 - backend.agents.LLM_cleaning_agent - INFO - Starting single-pass LLM processing...
+2025-05-06 16:18:29,952 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-06 16:18:29,961 - backend.agents.LLM_cleaning_agent - INFO - Progress: 100.00% (11/11 successful)
+2025-05-06 16:18:29,961 - backend.agents.LLM_cleaning_agent - INFO - Content cleaning completed in 16.94 seconds
+2025-05-06 16:18:32,330 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-06 16:18:33,798 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-06 16:18:35,251 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-06 16:18:37,068 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-06 16:18:38,070 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-06 16:18:39,339 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-06 16:18:41,047 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-06 16:18:42,892 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-06 16:18:44,342 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-06 16:18:46,506 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-06 16:18:48,371 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-06 16:18:48,371 - backend.app.sync_frontend_data - INFO - Database change detected. Starting sync...
+2025-05-06 16:18:48,384 - backend.app.sync_frontend_data - INFO - Performing manual sync...
+2025-05-06 16:18:48,388 - backend.app.frontend_database - INFO - Database verification successful
+2025-05-06 16:18:48,389 - backend.app.frontend_database - INFO - Database verification successful
+2025-05-06 16:18:48,515 - backend.app.frontend_database - INFO - Database sync completed successfully
+2025-05-06 16:18:48,515 - backend.app.sync_frontend_data - INFO - Sync completed successfully
+2025-05-06 16:18:48,616 - backend.app.frontend_database - INFO - Database sync completed successfully
+2025-05-06 16:18:48,616 - backend.app.sync_frontend_data - INFO - Manual sync completed successfully
+2025-05-06 16:18:48,616 - backend.app.frontend_database - INFO - Database verification successful
+2025-05-06 16:23:31,576 - root - INFO - Initializing databases...
+2025-05-06 16:23:31,576 - backend.app.sync_frontend_data - INFO - Starting database watch on: C:\Users\Danie\OneDrive - Aalborg Universitet\8. semester - Kandidat\Semester project\Business reputation tracker\backend\data
+2025-05-06 16:23:31,576 - backend.app.sync_frontend_data - INFO - Press Ctrl+C to stop watching
+2025-05-06 16:23:31,576 - backend.app.sync_frontend_data - INFO - Performing manual sync...
+2025-05-06 16:23:31,599 - backend.app.frontend_database - INFO - Database verification successful
+2025-05-06 16:23:31,619 - backend.app.frontend_database - INFO - Database verification successful
+2025-05-06 16:23:31,619 - backend.app.frontend_database - INFO - Removed company from frontend database: Norlys
+2025-05-06 16:23:31,619 - backend.app.frontend_database - INFO - Both databases initialized and verified successfully
+2025-05-06 16:23:31,636 - backend.app.frontend_database - INFO - Removed company from frontend database: Arla
+2025-05-06 16:23:31,636 - backend.app.frontend_database - INFO - Database verification successful
+2025-05-06 16:23:31,644 - root - INFO - Both databases initialized and verified successfully
+2025-05-06 16:23:31,652 - backend.app.frontend_database - INFO - Removed topic insight from frontend database: Parcel delivery reliability
+2025-05-06 16:23:31,653 - backend.app.frontend_database - INFO - Removed topic insight from frontend database: Delivery timeliness
+2025-05-06 16:23:31,654 - backend.app.frontend_database - INFO - Removed topic insight from frontend database: Customer service quality
+2025-05-06 16:23:31,655 - backend.app.frontend_database - INFO - Removed topic insight from frontend database: Pricing structure and increases
+2025-05-06 16:23:31,656 - backend.app.frontend_database - INFO - Removed topic insight from frontend database: Introductory discounts and their cancellation
+2025-05-06 16:23:31,657 - backend.app.frontend_database - INFO - Removed topic insight from frontend database: Billing errors and customer service disputes
+2025-05-06 16:23:31,658 - backend.app.frontend_database - INFO - Removed topic insight from frontend database: Customer financial impact
+2025-05-06 16:23:31,658 - backend.app.frontend_database - INFO - Removed topic insight from frontend database: Company response and transparency
+2025-05-06 16:23:31,662 - backend.app.frontend_database - INFO - Removed topic insight from frontend database: number transfer
+2025-05-06 16:23:31,662 - backend.app.frontend_database - INFO - Removed topic insight from frontend database: contact merging
+2025-05-06 16:23:31,662 - backend.app.frontend_database - INFO - Removed topic insight from frontend database: Like Home feature
+2025-05-06 16:23:31,662 - backend.app.frontend_database - INFO - Removed topic insight from frontend database: customer service
+2025-05-06 16:23:31,662 - backend.app.frontend_database - INFO - Removed topic insight from frontend database: Customer service
+2025-05-06 16:23:31,667 - backend.app.frontend_database - INFO - Removed topic insight from frontend database: Glass repair
+2025-05-06 16:23:31,668 - backend.app.frontend_database - INFO - Removed topic insight from frontend database: Staff friendliness
+2025-05-06 16:23:31,668 - backend.app.frontend_database - INFO - Removed topic insight from frontend database: Service quality
+2025-05-06 16:23:31,669 - backend.app.frontend_database - INFO - Removed topic insight from frontend database: Eye test experience
+2025-05-06 16:23:31,669 - backend.app.frontend_database - INFO - Removed topic insight from frontend database: Casabe (flatbread)
+2025-05-06 16:23:31,669 - backend.app.frontend_database - INFO - Removed topic insight from frontend database: Yuca (cassava)
+2025-05-06 16:23:31,670 - backend.app.frontend_database - INFO - Removed topic insight from frontend database: Taino cultural heritage
+2025-05-06 16:23:31,670 - backend.app.frontend_database - INFO - Removed topic insight from frontend database: Economic crisis in Cuba
+2025-05-06 16:23:31,670 - backend.app.frontend_database - INFO - Removed topic insight from frontend database: Local food traditions
+2025-05-06 16:23:31,670 - backend.app.frontend_database - INFO - Removed topic insight from frontend database: United Nations recognition
+2025-05-06 16:23:31,671 - backend.app.frontend_database - INFO - Removed topic insight from frontend database: Yucasabi business
+2025-05-06 16:23:31,671 - backend.app.frontend_database - INFO - Removed topic insight from frontend database: Legal dispute involving a Pennsylvania-based architecture firm
+2025-05-06 16:23:31,671 - backend.app.frontend_database - INFO - Removed topic insight from frontend database: Transformation of historic buildings into community spaces
+2025-05-06 16:23:31,671 - backend.app.frontend_database - INFO - Removed topic insight from frontend database: Notable architectural projects like The Juliet Centre
+2025-05-06 16:23:31,671 - backend.app.frontend_database - INFO - Removed topic insight from frontend database: Industry events, competitions, and awards
+2025-05-06 16:23:31,671 - backend.app.frontend_database - INFO - Removed topic insight from frontend database: Client relationships and project management
+2025-05-06 16:23:31,671 - backend.app.frontend_database - INFO - Removed topic insight from frontend database: Role of architects in society and community engagement
+2025-05-06 16:23:31,671 - backend.app.frontend_database - INFO - Removed topic insight from frontend database: Marketing, networking, and professional development
+2025-05-06 16:23:31,671 - backend.app.frontend_database - INFO - Removed topic insight from frontend database: Career development and flexible work arrangements
+2025-05-06 16:23:31,671 - backend.app.frontend_database - INFO - Removed topic insight from frontend database: Teamwork and positive work environment
+2025-05-06 16:23:31,671 - backend.app.frontend_database - INFO - Removed topic insight from frontend database: Job opportunities across various sectors (customer service, finance, utilities, sales, logistics, healthcare)
+2025-05-06 16:23:31,671 - backend.app.frontend_database - INFO - Removed topic insight from frontend database: Major projects such as fiber solutions and property sales
+2025-05-06 16:23:31,671 - backend.app.frontend_database - INFO - Removed topic insight from frontend database: Importance of online CVs and job matching
+2025-05-06 16:23:31,671 - backend.app.frontend_database - INFO - Removed topic insight from frontend database: Job opportunities and recruitment
+2025-05-06 16:23:31,671 - backend.app.frontend_database - INFO - Removed topic insight from frontend database: Organizational initiatives and innovation
+2025-05-06 16:23:31,671 - backend.app.frontend_database - INFO - Removed topic insight from frontend database: Humanitarian and social projects
+2025-05-06 16:23:31,671 - backend.app.frontend_database - INFO - Removed topic insight from frontend database: Corporate roles and operational support
+2025-05-06 16:23:31,671 - backend.app.frontend_database - INFO - Removed topic insight from frontend database: Online CVs and job matching services
+2025-05-06 16:23:31,671 - backend.app.frontend_database - INFO - Removed topic insight from frontend database: Store offers and news
+2025-05-06 16:23:31,671 - backend.app.frontend_database - INFO - Removed topic insight from frontend database: Lyngby Storcenter-appen
+2025-05-06 16:23:31,671 - backend.app.frontend_database - INFO - Removed topic insight from frontend database: Mors dag-aktiviteter
+2025-05-06 16:23:31,671 - backend.app.frontend_database - INFO - Removed topic insight from frontend database: Biomsterfestivalen
+2025-05-06 16:23:31,671 - backend.app.frontend_database - INFO - Removed topic insight from frontend database: Living Rooms design event
+2025-05-06 16:23:31,671 - backend.app.frontend_database - INFO - Removed topic insight from frontend database: Special discounts and promotions
+2025-05-06 16:23:31,671 - backend.app.frontend_database - INFO - Removed topic insight from frontend database: Company growth and market expansion
+2025-05-06 16:23:31,671 - backend.app.frontend_database - INFO - Removed topic insight from frontend database: Digital marketing and e-commerce initiatives
+2025-05-06 16:23:31,677 - backend.app.frontend_database - INFO - Removed topic insight from frontend database: Organizational updates and leadership roles
+2025-05-06 16:23:31,677 - backend.app.frontend_database - INFO - Removed topic insight from frontend database: Customer engagement and brand development
+2025-05-06 16:23:31,677 - backend.app.frontend_database - INFO - Removed topic insight from frontend database: Digital transformation and innovation
+2025-05-06 16:23:31,677 - backend.app.frontend_database - INFO - Removed topic insight from frontend database: Property management and hospitality services
+2025-05-06 16:23:31,677 - backend.app.frontend_database - INFO - Removed topic insight from frontend database: Teamwork, culture, and employee development
+2025-05-06 16:23:31,678 - backend.app.frontend_database - INFO - Removed topic insight from frontend database: Yuca/Casabe
+2025-05-06 16:23:31,678 - backend.app.frontend_database - INFO - Removed topic insight from frontend database: Cultural heritage
+2025-05-06 16:23:31,679 - backend.app.frontend_database - INFO - Removed topic insight from frontend database: UN recognition of cultural significance
+2025-05-06 16:23:31,679 - backend.app.frontend_database - INFO - Removed topic insight from frontend database: Traditional and artisanal food production
+2025-05-06 16:23:31,679 - backend.app.frontend_database - INFO - Removed topic insight from frontend database: Tourism and local consumption
+2025-05-06 16:23:31,679 - backend.app.frontend_database - INFO - Removed topic insight from frontend database: Job opportunities and professional development
+2025-05-06 16:23:31,680 - backend.app.frontend_database - INFO - Removed topic insight from frontend database: Importance of updating online profiles and creating job alerts
+2025-05-06 16:23:31,680 - backend.app.frontend_database - INFO - Removed topic insight from frontend database: Company updates and growth (Jobindex, DEKRA, Ungdomsbo, SISO A/S, Aarhus Maskinmesterskole)
+2025-05-06 16:23:31,680 - backend.app.frontend_database - INFO - Removed topic insight from frontend database: Themes of security, compliance, teamwork, and organizational growth
+2025-05-06 16:23:31,680 - backend.app.frontend_database - INFO - Removed topic insight from frontend database: Job advertisements and opportunities
+2025-05-06 16:23:31,681 - backend.app.frontend_database - INFO - Removed topic insight from frontend database: Company roles in customer service, technical support, sales, and operations
+2025-05-06 16:23:31,681 - backend.app.frontend_database - INFO - Removed topic insight from frontend database: Guidance on using Jobindex platform and creating online CVs
+2025-05-06 16:23:31,681 - backend.app.frontend_database - INFO - Removed topic insight from frontend database: Job alert notifications and employer contact facilitation
+2025-05-06 16:23:31,681 - backend.app.frontend_database - INFO - Removed topic insight from frontend database: Aalborg Forsyning leadership change
+2025-05-06 16:23:31,681 - backend.app.frontend_database - INFO - Removed topic insight from frontend database: Danish government 2035 electric fuels goal
+2025-05-06 16:23:31,681 - backend.app.frontend_database - INFO - Removed topic insight from frontend database: Power-to-x industry development
+2025-05-06 16:23:31,681 - backend.app.frontend_database - INFO - Removed topic insight from frontend database: Environmental restoration of fjords, lakes, waterways
+2025-05-06 16:23:31,681 - backend.app.frontend_database - INFO - Removed topic insight from frontend database: Renewable energy investments and energy policy
+2025-05-06 16:23:31,681 - backend.app.frontend_database - INFO - Removed topic insight from frontend database: Risks of energy insecurity and power outages
+2025-05-06 16:23:31,681 - backend.app.frontend_database - INFO - Removed topic insight from frontend database: European energy security and geopolitical considerations
+2025-05-06 16:23:31,681 - backend.app.frontend_database - INFO - Removed topic insight from frontend database: Traditional Cuban cuisine and cultural heritage
+2025-05-06 16:23:31,681 - backend.app.frontend_database - INFO - Removed topic insight from frontend database: Revival and modernization of casabe
+2025-05-06 16:23:31,681 - backend.app.frontend_database - INFO - Removed topic insight from frontend database: Entrepreneurship by Yudisley Cruz and Yucasabi
+2025-05-06 16:23:31,681 - backend.app.frontend_database - INFO - Removed topic insight from frontend database: Economic challenges affecting food imports in Cuba
+2025-05-06 16:23:31,681 - backend.app.frontend_database - INFO - Removed topic insight from frontend database: Recognition by the United Nations of casabe as intangible cultural heritage
+2025-05-06 16:23:31,681 - backend.app.frontend_database - INFO - Removed topic insight from frontend database: Artisanal, vegan, and gluten-free food trends
+2025-05-06 16:23:31,681 - backend.app.frontend_database - INFO - Removed topic insight from frontend database: Generational knowledge transfer by Julio Cesar Nunez
+2025-05-06 16:23:31,692 - backend.app.frontend_database - INFO - Database sync completed successfully
+2025-05-06 16:23:31,692 - backend.app.sync_frontend_data - INFO - Manual sync completed successfully
+2025-05-06 16:23:35,672 - backend.app.sync_frontend_data - INFO - Database change detected. Starting sync...
+2025-05-06 16:23:35,678 - backend.app.frontend_database - INFO - Database verification successful
+2025-05-06 16:23:35,684 - backend.app.frontend_database - INFO - Database sync completed successfully
+2025-05-06 16:23:35,688 - backend.app.sync_frontend_data - INFO - Sync completed successfully
+2025-05-06 16:24:11,025 - backend.agents.LLM_cleaning_agent - INFO - Found 1 articles to clean
+2025-05-06 16:24:11,026 - backend.agents.LLM_cleaning_agent - INFO - Processing batch 1/1
+2025-05-06 16:24:11,027 - backend.agents.LLM_cleaning_agent - INFO - Starting single-pass LLM processing...
+2025-05-06 16:24:15,060 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-06 16:24:15,076 - backend.agents.LLM_cleaning_agent - INFO - Progress: 100.00% (1/1 successful)
+2025-05-06 16:24:15,076 - backend.agents.LLM_cleaning_agent - INFO - Content cleaning completed in 4.05 seconds
+2025-05-06 16:24:16,696 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-06 16:24:16,716 - backend.app.sync_frontend_data - INFO - Performing manual sync...
+2025-05-06 16:24:16,724 - backend.app.frontend_database - INFO - Database verification successful
+2025-05-06 16:24:16,736 - backend.app.frontend_database - INFO - Database sync completed successfully
+2025-05-06 16:24:16,747 - backend.app.sync_frontend_data - INFO - Manual sync completed successfully
+2025-05-06 16:24:16,752 - backend.app.frontend_database - INFO - Database verification successful
+2025-05-06 16:24:52,272 - root - INFO - Initializing databases...
+2025-05-06 16:24:52,272 - backend.app.sync_frontend_data - INFO - Starting database watch on: C:\Users\Danie\OneDrive - Aalborg Universitet\8. semester - Kandidat\Semester project\Business reputation tracker\backend\data
+2025-05-06 16:24:52,272 - backend.app.sync_frontend_data - INFO - Press Ctrl+C to stop watching
+2025-05-06 16:24:52,272 - backend.app.sync_frontend_data - INFO - Performing manual sync...
+2025-05-06 16:24:52,296 - backend.app.frontend_database - INFO - Database verification successful
+2025-05-06 16:24:52,320 - backend.app.frontend_database - INFO - Removed company from frontend database: McDonalds
+2025-05-06 16:24:52,322 - backend.app.frontend_database - INFO - Database verification successful
+2025-05-06 16:24:52,324 - backend.app.frontend_database - INFO - Both databases initialized and verified successfully
+2025-05-06 16:24:52,324 - backend.app.frontend_database - INFO - Removed topic insight from frontend database: Restaurant ratings and customer reviews
+2025-05-06 16:24:52,334 - backend.app.frontend_database - INFO - Removed topic insight from frontend database: Quality of food and service
+2025-05-06 16:24:52,335 - backend.app.frontend_database - INFO - Removed topic insight from frontend database: Ambiance and dining experience
+2025-05-06 16:24:52,336 - backend.app.frontend_database - INFO - Database verification successful
+2025-05-06 16:24:52,336 - backend.app.frontend_database - INFO - Removed topic insight from frontend database: Popularity and customer inquiries
+2025-05-06 16:24:52,338 - root - INFO - Both databases initialized and verified successfully
+2025-05-06 16:24:52,340 - backend.app.frontend_database - INFO - Database sync completed successfully
+2025-05-06 16:24:52,340 - backend.app.sync_frontend_data - INFO - Manual sync completed successfully
+2025-05-06 16:25:01,329 - backend.app.sync_frontend_data - INFO - Database change detected. Starting sync...
+2025-05-06 16:25:01,343 - backend.app.frontend_database - INFO - Database verification successful
+2025-05-06 16:25:01,349 - backend.app.frontend_database - INFO - Database sync completed successfully
+2025-05-06 16:25:01,349 - backend.app.sync_frontend_data - INFO - Sync completed successfully
+2025-05-06 16:25:30,456 - backend.agents.LLM_cleaning_agent - INFO - Found 1 articles to clean
+2025-05-06 16:25:30,456 - backend.agents.LLM_cleaning_agent - INFO - Processing batch 1/1
+2025-05-06 16:25:30,460 - backend.agents.LLM_cleaning_agent - INFO - Starting single-pass LLM processing...
+2025-05-06 16:25:35,365 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-06 16:25:35,393 - backend.agents.LLM_cleaning_agent - INFO - Progress: 100.00% (1/1 successful)
+2025-05-06 16:25:35,394 - backend.agents.LLM_cleaning_agent - INFO - Content cleaning completed in 4.94 seconds
+2025-05-06 16:25:36,898 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-06 16:25:36,911 - backend.app.sync_frontend_data - INFO - Performing manual sync...
+2025-05-06 16:25:36,917 - backend.app.frontend_database - INFO - Database verification successful
+2025-05-06 16:25:36,947 - backend.app.frontend_database - INFO - Database sync completed successfully
+2025-05-06 16:25:36,948 - backend.app.sync_frontend_data - INFO - Manual sync completed successfully
+2025-05-06 16:25:36,952 - backend.app.frontend_database - INFO - Database verification successful
+2025-05-06 16:25:54,072 - root - INFO - Initializing databases...
+2025-05-06 16:25:54,072 - backend.app.sync_frontend_data - INFO - Starting database watch on: C:\Users\Danie\OneDrive - Aalborg Universitet\8. semester - Kandidat\Semester project\Business reputation tracker\backend\data
+2025-05-06 16:25:54,072 - backend.app.sync_frontend_data - INFO - Press Ctrl+C to stop watching
+2025-05-06 16:25:54,072 - backend.app.sync_frontend_data - INFO - Performing manual sync...
+2025-05-06 16:25:54,094 - backend.app.frontend_database - INFO - Database verification successful
+2025-05-06 16:25:54,138 - backend.app.frontend_database - INFO - Database verification successful
+2025-05-06 16:25:54,138 - backend.app.frontend_database - INFO - Both databases initialized and verified successfully
+2025-05-06 16:25:54,150 - backend.app.frontend_database - INFO - Removed topic insight from frontend database: Job opportunities and recruitment
+2025-05-06 16:25:54,150 - backend.app.frontend_database - INFO - Database verification successful
+2025-05-06 16:25:54,150 - backend.app.frontend_database - INFO - Removed topic insight from frontend database: Company processes and procedures
+2025-05-06 16:25:54,156 - root - INFO - Both databases initialized and verified successfully
+2025-05-06 16:25:54,156 - backend.app.frontend_database - INFO - Removed topic insight from frontend database: Career development and skill enhancement
+2025-05-06 16:25:54,156 - backend.app.frontend_database - INFO - Removed topic insight from frontend database: Safety, quality, and teamwork
+2025-05-06 16:25:54,158 - backend.app.frontend_database - INFO - Removed topic insight from frontend database: Online CV creation and application instructions
+2025-05-06 16:25:54,159 - backend.app.frontend_database - INFO - Removed topic insight from frontend database: Cooking Classes in Florence
+2025-05-06 16:25:54,160 - backend.app.frontend_database - INFO - Removed topic insight from frontend database: Florence's Culinary Culture
+2025-05-06 16:25:54,160 - backend.app.frontend_database - INFO - Removed topic insight from frontend database: Tourism in Tuscany
+2025-05-06 16:25:54,162 - backend.app.frontend_database - INFO - Removed topic insight from frontend database: Food Enthusiasts' Experiences
+2025-05-06 16:25:54,164 - backend.app.frontend_database - INFO - Removed topic insight from frontend database: Aria Foods' growth and global presence
+2025-05-06 16:25:54,164 - backend.app.frontend_database - INFO - Removed topic insight from frontend database: Process Optimization Specialist role and internal improvements
+2025-05-06 16:25:54,165 - backend.app.frontend_database - INFO - Removed topic insight from frontend database: Sustainability and environmental responsibility
+2025-05-06 16:25:54,166 - backend.app.frontend_database - INFO - Removed topic insight from frontend database: High-quality dairy products and healthy nutrition
+2025-05-06 16:25:54,166 - backend.app.frontend_database - INFO - Removed topic insight from frontend database: Diversity, collaboration, and societal impact
+2025-05-06 16:25:54,167 - backend.app.frontend_database - INFO - Removed topic insight from frontend database: Locations across the Netherlands
+2025-05-06 16:25:54,167 - backend.app.frontend_database - INFO - Removed topic insight from frontend database: Partnerships with NGOs and stakeholders
+2025-05-06 16:25:54,167 - backend.app.frontend_database - INFO - Removed topic insight from frontend database: Google LLC
+2025-05-06 16:25:54,167 - backend.app.frontend_database - INFO - Removed topic insight from frontend database: Year 2025
+2025-05-06 16:25:54,168 - backend.app.frontend_database - INFO - Removed topic insight from frontend database: Browser support notification
+2025-05-06 16:25:54,168 - backend.app.frontend_database - INFO - Removed topic insight from frontend database: Job postings
+2025-05-06 16:25:54,168 - backend.app.frontend_database - INFO - Removed topic insight from frontend database: User engagement and application prompts
+2025-05-06 16:25:54,168 - backend.app.frontend_database - INFO - Removed topic insight from frontend database: Job opportunities across various sectors
+2025-05-06 16:25:54,168 - backend.app.frontend_database - INFO - Removed topic insight from frontend database: Company values (teamwork, sustainability, innovation)
+2025-05-06 16:25:54,168 - backend.app.frontend_database - INFO - Removed topic insight from frontend database: Employee engagement and training
+2025-05-06 16:25:54,168 - backend.app.frontend_database - INFO - Removed topic insight from frontend database: Recruitment processes and candidate management
+2025-05-06 16:25:54,168 - backend.app.frontend_database - INFO - Removed topic insight from frontend database: Real estate services (residential, commercial, land development, etc.)
+2025-05-06 16:25:54,168 - backend.app.frontend_database - INFO - Removed topic insight from frontend database: Use of IT solutions and marketing expertise
+2025-05-06 16:25:54,168 - backend.app.frontend_database - INFO - Removed topic insight from frontend database: Customer service and communication
+2025-05-06 16:25:54,168 - backend.app.frontend_database - INFO - Removed topic insight from frontend database: Industry awards and professional memberships (NAEA, ARLA, UKALA)
+2025-05-06 16:25:54,172 - backend.app.frontend_database - INFO - Removed topic insight from frontend database: Property marketing and legal considerations
+2025-05-06 16:25:54,172 - backend.app.frontend_database - INFO - Removed topic insight from frontend database: Advice on online property scams and transparency
+2025-05-06 16:25:54,172 - backend.app.frontend_database - INFO - Removed topic insight from frontend database: Job opportunities
+2025-05-06 16:25:54,172 - backend.app.frontend_database - INFO - Removed topic insight from frontend database: Digital transformation
+2025-05-06 16:25:54,173 - backend.app.frontend_database - INFO - Removed topic insight from frontend database: Organizational growth
+2025-05-06 16:25:54,173 - backend.app.frontend_database - INFO - Removed topic insight from frontend database: Operational excellence
+2025-05-06 16:25:54,174 - backend.app.frontend_database - INFO - Removed topic insight from frontend database: Quality and safety
+2025-05-06 16:25:54,174 - backend.app.frontend_database - INFO - Removed topic insight from frontend database: Customer satisfaction
+2025-05-06 16:25:54,174 - backend.app.frontend_database - INFO - Removed topic insight from frontend database: Strategic development
+2025-05-06 16:25:54,175 - backend.app.frontend_database - INFO - Removed topic insight from frontend database: Online CV guidance
+2025-05-06 16:25:54,175 - backend.app.frontend_database - INFO - Removed topic insight from frontend database: Legal costs and court proceedings
+2025-05-06 16:25:54,175 - backend.app.frontend_database - INFO - Removed topic insight from frontend database: Wagatha Christie libel case
+2025-05-06 16:25:54,176 - backend.app.frontend_database - INFO - Removed topic insight from frontend database: Accusations of information leaking to The Sun
+2025-05-06 16:25:54,176 - backend.app.frontend_database - INFO - Removed topic insight from frontend database: Reputation and conduct of Rebekah Vardy and Coleen Rooney
+2025-05-06 16:25:54,176 - backend.app.frontend_database - INFO - Removed topic insight from frontend database: Judicial rulings and court findings
+2025-05-06 16:25:54,176 - backend.app.frontend_database - INFO - Removed topic insight from frontend database: Arla Foods
+2025-05-06 16:25:54,176 - backend.app.frontend_database - INFO - Removed topic insight from frontend database: Lockerbie Dairy
+2025-05-06 16:25:54,176 - backend.app.frontend_database - INFO - Removed topic insight from frontend database: Anaerobic Digestion Plant
+2025-05-06 16:25:54,179 - backend.app.frontend_database - INFO - Removed topic insight from frontend database: Effluent Treatment Plant (ETP)
+2025-05-06 16:25:54,179 - backend.app.frontend_database - INFO - Removed topic insight from frontend database: Sustainability and innovation
+2025-05-06 16:25:54,179 - backend.app.frontend_database - INFO - Removed topic insight from frontend database: Workplace culture and employee benefits
+2025-05-06 16:25:54,180 - backend.app.frontend_database - INFO - Removed topic insight from frontend database: Significant investment and technological advancement
+2025-05-06 16:25:54,186 - backend.app.frontend_database - INFO - Database sync completed successfully
+2025-05-06 16:25:54,186 - backend.app.sync_frontend_data - INFO - Manual sync completed successfully
+2025-05-06 16:26:22,202 - backend.app.sync_frontend_data - INFO - Database change detected. Starting sync...
+2025-05-06 16:26:22,211 - backend.app.frontend_database - INFO - Database verification successful
+2025-05-06 16:26:22,234 - backend.app.frontend_database - INFO - Database sync completed successfully
+2025-05-06 16:26:22,234 - backend.app.sync_frontend_data - INFO - Sync completed successfully
+2025-05-06 16:27:05,226 - backend.agents.LLM_cleaning_agent - INFO - Found 1 articles to clean
+2025-05-06 16:27:05,227 - backend.agents.LLM_cleaning_agent - INFO - Processing batch 1/1
+2025-05-06 16:27:05,229 - backend.agents.LLM_cleaning_agent - INFO - Starting single-pass LLM processing...
+2025-05-06 16:27:09,763 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-06 16:27:09,772 - backend.agents.LLM_cleaning_agent - INFO - Progress: 100.00% (1/1 successful)
+2025-05-06 16:27:09,772 - backend.agents.LLM_cleaning_agent - INFO - Content cleaning completed in 4.54 seconds
+2025-05-06 16:27:11,622 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-06 16:27:11,634 - backend.app.sync_frontend_data - INFO - Performing manual sync...
+2025-05-06 16:27:11,641 - backend.app.frontend_database - INFO - Database verification successful
+2025-05-06 16:27:11,667 - backend.app.frontend_database - INFO - Database sync completed successfully
+2025-05-06 16:27:11,667 - backend.app.sync_frontend_data - INFO - Manual sync completed successfully
+2025-05-06 16:27:11,680 - backend.app.frontend_database - INFO - Database verification successful
+2025-05-06 16:51:10,953 - root - INFO - Initializing databases...
+2025-05-06 16:51:10,953 - backend.app.sync_frontend_data - INFO - Starting database watch on: C:\Users\Danie\OneDrive - Aalborg Universitet\8. semester - Kandidat\Semester project\Business reputation tracker - full pipeline\backend\data
+2025-05-06 16:51:10,955 - backend.app.sync_frontend_data - INFO - Press Ctrl+C to stop watching
+2025-05-06 16:51:10,957 - backend.app.sync_frontend_data - INFO - Performing manual sync...
+2025-05-06 16:51:10,976 - backend.app.frontend_database - INFO - Database verification successful
+2025-05-06 16:51:10,993 - backend.app.frontend_database - INFO - Database verification successful
+2025-05-06 16:51:10,994 - backend.app.frontend_database - INFO - Both databases initialized and verified successfully
+2025-05-06 16:51:10,998 - backend.app.frontend_database - INFO - Removed company from frontend database:  McDonald's
+2025-05-06 16:51:10,998 - backend.app.frontend_database - INFO - Database verification successful
+2025-05-06 16:51:10,998 - root - INFO - Both databases initialized and verified successfully
+2025-05-06 16:51:11,021 - backend.app.frontend_database - INFO - Removed article from frontend database: https://www.jobindex.dk/jobsoegning/ledelse/aarhus
+2025-05-06 16:51:11,021 - backend.app.frontend_database - INFO - Removed topic insight from frontend database: Organizational actions and roles
+2025-05-06 16:51:11,021 - backend.app.frontend_database - INFO - Removed topic insight from frontend database: Technical requirements and project management
+2025-05-06 16:51:11,021 - backend.app.frontend_database - INFO - Removed topic insight from frontend database: Recruitment and team leadership
+2025-05-06 16:51:11,021 - backend.app.frontend_database - INFO - Removed topic insight from frontend database: Logistics development and infrastructure
+2025-05-06 16:51:11,021 - backend.app.frontend_database - INFO - Removed topic insight from frontend database: Digital transformation and technological advancements
+2025-05-06 16:51:11,021 - backend.app.frontend_database - INFO - Removed topic insight from frontend database: Customer service and stakeholder interactions
+2025-05-06 16:51:11,021 - backend.app.frontend_database - INFO - Removed topic insight from frontend database: Employee engagement and leadership
+2025-05-06 16:51:11,032 - backend.app.frontend_database - INFO - Database sync completed successfully
+2025-05-06 16:51:11,032 - backend.app.sync_frontend_data - INFO - Manual sync completed successfully
+2025-05-06 16:51:13,178 - pipeline - WARNING - No search results found. Pipeline may not proceed as expected.
+2025-05-06 16:51:13,178 - pipeline - WARNING - No content was scraped. Pipeline may not proceed as expected.
+2025-05-06 16:51:13,224 - backend.agents.LLM_cleaning_agent - INFO - Found 0 articles to clean
+2025-05-06 16:51:13,224 - backend.agents.LLM_cleaning_agent - INFO - Content cleaning completed in 0.00 seconds
+2025-05-06 16:51:13,226 - pipeline - WARNING - No content was cleaned. Pipeline may not proceed as expected.
+2025-05-06 16:51:13,226 - cleaner - WARNING - No content was cleaned. Pipeline may not proceed as expected.
+2025-05-06 16:51:13,249 - pipeline - WARNING - No content was analyzed. Pipeline may not proceed as expected.
+2025-05-06 16:51:13,250 - backend.app.sync_frontend_data - INFO - Performing manual sync...
+2025-05-06 16:51:13,259 - backend.app.frontend_database - INFO - Database verification successful
+2025-05-06 16:51:13,278 - backend.app.frontend_database - INFO - Database sync completed successfully
+2025-05-06 16:51:13,285 - backend.app.sync_frontend_data - INFO - Manual sync completed successfully
+2025-05-06 16:51:13,306 - backend.app.frontend_database - INFO - Database verification successful
+2025-05-06 16:53:32,404 - root - INFO - Initializing databases...
+2025-05-06 16:53:32,404 - backend.app.sync_frontend_data - INFO - Starting database watch on: C:\Users\Danie\OneDrive - Aalborg Universitet\8. semester - Kandidat\Semester project\Business reputation tracker - full pipeline\backend\data
+2025-05-06 16:53:32,407 - backend.app.sync_frontend_data - INFO - Press Ctrl+C to stop watching
+2025-05-06 16:53:32,409 - backend.app.sync_frontend_data - INFO - Performing manual sync...
+2025-05-06 16:53:32,441 - backend.app.frontend_database - INFO - Database verification successful
+2025-05-06 16:53:32,482 - backend.app.frontend_database - INFO - Database verification successful
+2025-05-06 16:53:32,497 - backend.app.frontend_database - INFO - Both databases initialized and verified successfully
+2025-05-06 16:53:32,498 - backend.app.frontend_database - INFO - Database sync completed successfully
+2025-05-06 16:53:32,500 - backend.app.sync_frontend_data - INFO - Manual sync completed successfully
+2025-05-06 16:53:32,503 - backend.app.frontend_database - INFO - Database verification successful
+2025-05-06 16:53:32,503 - root - INFO - Both databases initialized and verified successfully
+2025-05-06 16:53:34,642 - pipeline - WARNING - No search results found. Pipeline may not proceed as expected.
+2025-05-06 16:53:34,652 - pipeline - WARNING - No content was scraped. Pipeline may not proceed as expected.
+2025-05-06 16:53:34,695 - backend.agents.LLM_cleaning_agent - INFO - Found 0 articles to clean
+2025-05-06 16:53:34,696 - backend.agents.LLM_cleaning_agent - INFO - Content cleaning completed in 0.00 seconds
+2025-05-06 16:53:34,702 - pipeline - WARNING - No content was cleaned. Pipeline may not proceed as expected.
+2025-05-06 16:53:34,705 - cleaner - WARNING - No content was cleaned. Pipeline may not proceed as expected.
+2025-05-06 16:53:34,730 - pipeline - WARNING - No content was analyzed. Pipeline may not proceed as expected.
+2025-05-06 16:53:34,732 - backend.app.sync_frontend_data - INFO - Performing manual sync...
+2025-05-06 16:53:34,738 - backend.app.frontend_database - INFO - Database verification successful
+2025-05-06 16:53:34,751 - backend.app.frontend_database - INFO - Database sync completed successfully
+2025-05-06 16:53:34,753 - backend.app.sync_frontend_data - INFO - Manual sync completed successfully
+2025-05-06 16:53:34,758 - backend.app.frontend_database - INFO - Database verification successful
+2025-05-06 16:54:09,423 - root - INFO - Initializing databases...
+2025-05-06 16:54:09,423 - backend.app.sync_frontend_data - INFO - Starting database watch on: C:\Users\Danie\OneDrive - Aalborg Universitet\8. semester - Kandidat\Semester project\Business reputation tracker - full pipeline\backend\data
+2025-05-06 16:54:09,423 - backend.app.sync_frontend_data - INFO - Press Ctrl+C to stop watching
+2025-05-06 16:54:09,423 - backend.app.sync_frontend_data - INFO - Performing manual sync...
+2025-05-06 16:54:09,441 - backend.app.frontend_database - INFO - Database verification successful
+2025-05-06 16:54:09,468 - backend.app.frontend_database - INFO - Database verification successful
+2025-05-06 16:54:09,474 - backend.app.frontend_database - INFO - Both databases initialized and verified successfully
+2025-05-06 16:54:09,476 - backend.app.frontend_database - INFO - Database sync completed successfully
+2025-05-06 16:54:09,477 - backend.app.sync_frontend_data - INFO - Manual sync completed successfully
+2025-05-06 16:54:09,479 - backend.app.frontend_database - INFO - Database verification successful
+2025-05-06 16:54:09,479 - root - INFO - Both databases initialized and verified successfully
+2025-05-06 16:54:14,109 - pipeline - WARNING - No search results found. Pipeline may not proceed as expected.
+2025-05-06 16:54:14,116 - pipeline - WARNING - No content was scraped. Pipeline may not proceed as expected.
+2025-05-06 16:54:14,146 - backend.agents.LLM_cleaning_agent - INFO - Found 0 articles to clean
+2025-05-06 16:54:14,148 - backend.agents.LLM_cleaning_agent - INFO - Content cleaning completed in 0.00 seconds
+2025-05-06 16:54:14,148 - pipeline - WARNING - No content was cleaned. Pipeline may not proceed as expected.
+2025-05-06 16:54:14,148 - cleaner - WARNING - No content was cleaned. Pipeline may not proceed as expected.
+2025-05-06 16:54:14,168 - pipeline - WARNING - No content was analyzed. Pipeline may not proceed as expected.
+2025-05-06 16:54:14,169 - backend.app.sync_frontend_data - INFO - Performing manual sync...
+2025-05-06 16:54:14,172 - backend.app.frontend_database - INFO - Database verification successful
+2025-05-06 16:54:14,180 - backend.app.frontend_database - INFO - Database sync completed successfully
+2025-05-06 16:54:14,181 - backend.app.sync_frontend_data - INFO - Manual sync completed successfully
+2025-05-06 16:54:14,184 - backend.app.frontend_database - INFO - Database verification successful
+2025-05-06 16:55:12,260 - root - INFO - Initializing databases...
+2025-05-06 16:55:12,260 - backend.app.sync_frontend_data - INFO - Starting database watch on: C:\Users\Danie\OneDrive - Aalborg Universitet\8. semester - Kandidat\Semester project\Business reputation tracker - full pipeline\backend\data
+2025-05-06 16:55:12,262 - backend.app.sync_frontend_data - INFO - Press Ctrl+C to stop watching
+2025-05-06 16:55:12,264 - backend.app.sync_frontend_data - INFO - Performing manual sync...
+2025-05-06 16:55:12,280 - backend.app.frontend_database - INFO - Database verification successful
+2025-05-06 16:55:12,302 - backend.app.frontend_database - INFO - Database verification successful
+2025-05-06 16:55:12,313 - backend.app.frontend_database - INFO - Both databases initialized and verified successfully
+2025-05-06 16:55:12,319 - backend.app.frontend_database - INFO - Database sync completed successfully
+2025-05-06 16:55:12,319 - backend.app.frontend_database - INFO - Database verification successful
+2025-05-06 16:55:12,320 - backend.app.sync_frontend_data - INFO - Manual sync completed successfully
+2025-05-06 16:55:12,320 - root - INFO - Both databases initialized and verified successfully
+2025-05-06 16:55:18,255 - pipeline - WARNING - No search results found. Pipeline may not proceed as expected.
+2025-05-06 16:55:18,263 - pipeline - WARNING - No content was scraped. Pipeline may not proceed as expected.
+2025-05-06 16:55:18,294 - backend.agents.LLM_cleaning_agent - INFO - Found 0 articles to clean
+2025-05-06 16:55:18,295 - backend.agents.LLM_cleaning_agent - INFO - Content cleaning completed in 0.00 seconds
+2025-05-06 16:55:18,297 - pipeline - WARNING - No content was cleaned. Pipeline may not proceed as expected.
+2025-05-06 16:55:18,297 - cleaner - WARNING - No content was cleaned. Pipeline may not proceed as expected.
+2025-05-06 16:55:18,316 - pipeline - WARNING - No content was analyzed. Pipeline may not proceed as expected.
+2025-05-06 16:55:18,317 - backend.app.sync_frontend_data - INFO - Performing manual sync...
+2025-05-06 16:55:18,321 - backend.app.frontend_database - INFO - Database verification successful
+2025-05-06 16:55:18,330 - backend.app.frontend_database - INFO - Database sync completed successfully
+2025-05-06 16:55:18,331 - backend.app.sync_frontend_data - INFO - Manual sync completed successfully
+2025-05-06 16:55:18,335 - backend.app.frontend_database - INFO - Database verification successful
+2025-05-06 16:56:29,602 - root - INFO - Initializing databases...
+2025-05-06 16:56:29,603 - backend.app.sync_frontend_data - INFO - Starting database watch on: C:\Users\Danie\OneDrive - Aalborg Universitet\8. semester - Kandidat\Semester project\Business reputation tracker - full pipeline\backend\data
+2025-05-06 16:56:29,604 - backend.app.sync_frontend_data - INFO - Press Ctrl+C to stop watching
+2025-05-06 16:56:29,606 - backend.app.sync_frontend_data - INFO - Performing manual sync...
+2025-05-06 16:56:29,618 - backend.app.frontend_database - INFO - Database verification successful
+2025-05-06 16:56:29,653 - backend.app.frontend_database - INFO - Database verification successful
+2025-05-06 16:56:29,654 - backend.app.frontend_database - INFO - Database sync completed successfully
+2025-05-06 16:56:29,655 - backend.app.frontend_database - INFO - Both databases initialized and verified successfully
+2025-05-06 16:56:29,655 - backend.app.sync_frontend_data - INFO - Manual sync completed successfully
+2025-05-06 16:56:29,658 - backend.app.frontend_database - INFO - Database verification successful
+2025-05-06 16:56:29,658 - root - INFO - Both databases initialized and verified successfully
+2025-05-06 16:56:30,100 - backend.app.sync_frontend_data - INFO - Database change detected. Starting sync...
+2025-05-06 16:56:30,100 - backend.app.frontend_database - INFO - Database verification successful
+2025-05-06 16:56:30,117 - backend.app.frontend_database - INFO - Database sync completed successfully
+2025-05-06 16:56:30,117 - backend.app.sync_frontend_data - INFO - Sync completed successfully
+2025-05-06 16:56:53,938 - backend.agents.LLM_cleaning_agent - INFO - Found 8 articles to clean
+2025-05-06 16:56:53,939 - backend.agents.LLM_cleaning_agent - INFO - Processing batch 1/1
+2025-05-06 16:56:53,942 - backend.agents.LLM_cleaning_agent - INFO - Starting single-pass LLM processing...
+2025-05-06 16:56:54,016 - backend.agents.LLM_cleaning_agent - INFO - Starting single-pass LLM processing...
+2025-05-06 16:56:54,022 - backend.agents.LLM_cleaning_agent - INFO - Starting single-pass LLM processing...
+2025-05-06 16:56:54,027 - backend.agents.LLM_cleaning_agent - INFO - Starting single-pass LLM processing...
+2025-05-06 16:56:54,030 - backend.agents.LLM_cleaning_agent - INFO - Starting single-pass LLM processing...
+2025-05-06 16:56:54,038 - backend.agents.LLM_cleaning_agent - INFO - Starting single-pass LLM processing...
+2025-05-06 16:56:54,043 - backend.agents.LLM_cleaning_agent - INFO - Starting single-pass LLM processing...
+2025-05-06 16:56:54,045 - backend.agents.LLM_cleaning_agent - INFO - Starting single-pass LLM processing...
+2025-05-06 16:56:56,555 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-06 16:56:57,492 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-06 16:56:58,049 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-06 16:56:58,123 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-06 16:56:59,096 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-06 16:56:59,785 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-06 16:56:59,897 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-06 16:57:04,688 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-06 16:57:04,746 - backend.agents.LLM_cleaning_agent - INFO - Progress: 100.00% (8/8 successful)
+2025-05-06 16:57:04,746 - backend.agents.LLM_cleaning_agent - INFO - Content cleaning completed in 10.81 seconds
+2025-05-06 16:57:06,749 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-06 16:57:07,880 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-06 16:57:10,271 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-06 16:57:12,543 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-06 16:57:13,971 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-06 16:57:15,749 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-06 16:57:17,689 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-06 16:57:19,648 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-06 16:57:19,666 - backend.app.sync_frontend_data - INFO - Performing manual sync...
+2025-05-06 16:57:19,671 - backend.app.frontend_database - INFO - Database verification successful
+2025-05-06 16:57:19,739 - backend.app.frontend_database - INFO - Database sync completed successfully
+2025-05-06 16:57:19,741 - backend.app.sync_frontend_data - INFO - Manual sync completed successfully
+2025-05-06 16:57:19,745 - backend.app.frontend_database - INFO - Database verification successful
+2025-05-07 20:48:29,048 - root - INFO - Initializing databases...
+2025-05-07 20:48:29,049 - backend.app.sync_frontend_data - INFO - Starting database watch on: C:\Users\Danie\OneDrive - Aalborg Universitet\8. semester - Kandidat\Semester project\Business reputation tracker - full pipeline\backend\data
+2025-05-07 20:48:29,051 - backend.app.sync_frontend_data - INFO - Press Ctrl+C to stop watching
+2025-05-07 20:48:29,052 - backend.app.sync_frontend_data - INFO - Performing manual sync...
+2025-05-07 20:48:29,087 - backend.app.frontend_database - INFO - Database verification successful
+2025-05-07 20:48:29,104 - backend.app.frontend_database - INFO - Database verification successful
+2025-05-07 20:48:29,109 - backend.app.frontend_database - INFO - Both databases initialized and verified successfully
+2025-05-07 20:48:29,116 - backend.app.frontend_database - INFO - Database verification successful
+2025-05-07 20:48:29,121 - root - INFO - Both databases initialized and verified successfully
+2025-05-07 20:48:29,173 - backend.app.frontend_database - INFO - Database sync completed successfully
+2025-05-07 20:48:29,174 - backend.app.sync_frontend_data - INFO - Manual sync completed successfully
+2025-05-07 20:48:29,492 - backend.app.sync_frontend_data - INFO - Database change detected. Starting sync...
+2025-05-07 20:48:29,497 - backend.app.frontend_database - INFO - Database verification successful
+2025-05-07 20:48:29,549 - backend.app.frontend_database - INFO - Database sync completed successfully
+2025-05-07 20:48:29,550 - backend.app.sync_frontend_data - INFO - Sync completed successfully
+2025-05-07 20:48:53,594 - backend.agents.LLM_cleaning_agent - INFO - Found 7 articles to clean
+2025-05-07 20:48:53,595 - backend.agents.LLM_cleaning_agent - INFO - Processing batch 1/1
+2025-05-07 20:48:53,596 - backend.agents.LLM_cleaning_agent - INFO - Starting single-pass LLM processing...
+2025-05-07 20:48:53,654 - backend.agents.LLM_cleaning_agent - INFO - Starting single-pass LLM processing...
+2025-05-07 20:48:53,658 - backend.agents.LLM_cleaning_agent - INFO - Starting single-pass LLM processing...
+2025-05-07 20:48:53,662 - backend.agents.LLM_cleaning_agent - INFO - Starting single-pass LLM processing...
+2025-05-07 20:48:53,665 - backend.agents.LLM_cleaning_agent - INFO - Starting single-pass LLM processing...
+2025-05-07 20:48:53,669 - backend.agents.LLM_cleaning_agent - INFO - Starting single-pass LLM processing...
+2025-05-07 20:48:53,672 - backend.agents.LLM_cleaning_agent - INFO - Starting single-pass LLM processing...
+2025-05-07 20:48:55,188 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-07 20:48:56,599 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-07 20:48:56,852 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-07 20:48:57,024 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-07 20:48:57,223 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-07 20:48:57,803 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-07 20:48:58,559 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-07 20:48:58,605 - backend.agents.LLM_cleaning_agent - INFO - Progress: 100.00% (7/7 successful)
+2025-05-07 20:48:58,606 - backend.agents.LLM_cleaning_agent - INFO - Content cleaning completed in 5.01 seconds
+2025-05-07 20:49:01,345 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-07 20:49:02,647 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-07 20:49:04,744 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-07 20:49:06,302 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-07 20:49:08,359 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-07 20:49:10,481 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-07 20:49:12,181 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-05-07 20:49:12,203 - backend.app.sync_frontend_data - INFO - Performing manual sync...
+2025-05-07 20:49:12,208 - backend.app.frontend_database - INFO - Database verification successful
+2025-05-07 20:49:12,285 - backend.app.frontend_database - INFO - Database sync completed successfully
+2025-05-07 20:49:12,286 - backend.app.sync_frontend_data - INFO - Manual sync completed successfully
+2025-05-07 20:49:12,289 - backend.app.frontend_database - INFO - Database verification successful
