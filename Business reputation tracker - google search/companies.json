@@ -1,0 +1,16 @@
+[
+    {
+      "company_name": "Apple Inc.",
+      "description": "A multinational technology company that designs, manufactures, and markets smartphones, personal computers, tablets, wearables, and accessories",
+      "industry": "Technology",
+      "country": "us",
+      "services": ["Consumer electronics", "Software development", "Digital services", "Cloud computing"]
+    },
+    {
+      "company_name": "Norlys",
+      "description": "Danish energy company providing electricity, gas, and fiber internet services to customers across Denmark",
+      "industry": "Energy",
+      "country": "dk",
+      "services": ["Electricity", "Natural gas", "Fiber internet", "Energy solutions"]
+    }
+  ]

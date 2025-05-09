@@ -1,0 +1,22 @@
+[
+  {
+    "company_id": "Apple_Inc",
+    "search_query": "\"Apple Inc.\" consumer electronics software development cloud computing AAPL",
+    "parameters": {
+      "dateRestrict": "m1",
+      "lr": "lang_en",
+      "hl": "en",
+      "num": 10
+    }
+  },
+  {
+    "company_id": "Norlys",
+    "search_query": "\"Norlys\" energy services electricity natural gas fiber internet Denmark stock-ticker",
+    "parameters": {
+      "dateRestrict": "m1",
+      "lr": "lang_da",
+      "hl": "da",
+      "num": 10
+    }
+  }
+]
