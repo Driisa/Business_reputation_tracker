@@ -1,23 +1,26 @@
 #!/usr/bin/env python3
 import os
-import logging
 import time
 from datetime import datetime
 from data.pipeline_db_config import init_db, SessionLocal
 from data.pipeline_db_models import SearchResult, ScrapedContent, CleanedContent, AnalysisResult
 from sqlalchemy import and_
+from logging_config import setup_logging
 
-# Configure logging
-logging.basicConfig(
-    level=logging.INFO,
-    format="%(asctime)s - %(levelname)s - %(message)s",
-    datefmt="%Y-%m-%d %H:%M:%S"
-)
-logger = logging.getLogger("pipeline")
+# Setup logging
+loggers = setup_logging()
+logger = loggers["pipeline"]
+db_logger = loggers["database"]
 
 def check_for_duplicate_search_result(session, link):
     """Check if a search result with the given link already exists."""
-    return session.query(SearchResult).filter(SearchResult.link == link).first() is not None
+    try:
+        result = session.query(SearchResult).filter(SearchResult.link == link).first() is not None
+        db_logger.debug(f"Checked for duplicate search result: {link}")
+        return result
+    except Exception as e:
+        db_logger.error(f"Error checking for duplicate search result: {str(e)}")
+        raise
 
 def check_for_duplicate_scraped_content(session, search_result_id):
     """Check if scraped content for the given search result already exists."""
@@ -40,11 +43,11 @@ def check_database_state():
         cleaned_content = session.query(CleanedContent).count()
         analysis_results = session.query(AnalysisResult).count()
         
-        logger.info("Current database state:")
-        logger.info(f"- Search Results: {search_results}")
-        logger.info(f"- Scraped Content: {scraped_content}")
-        logger.info(f"- Cleaned Content: {cleaned_content}")
-        logger.info(f"- Analysis Results: {analysis_results}")
+        db_logger.info("Current database state:")
+        db_logger.info(f"- Search Results: {search_results}")
+        db_logger.info(f"- Scraped Content: {scraped_content}")
+        db_logger.info(f"- Cleaned Content: {cleaned_content}")
+        db_logger.info(f"- Analysis Results: {analysis_results}")
         
         return {
             "search_results": search_results,
@@ -52,6 +55,9 @@ def check_database_state():
             "cleaned_content": cleaned_content,
             "analysis_results": analysis_results
         }
+    except Exception as e:
+        db_logger.error(f"Error checking database state: {str(e)}")
+        raise
     finally:
         session.close()
 
@@ -62,7 +68,12 @@ def run_pipeline():
     
     # Initialize database
     logger.info("Initializing database...")
-    init_db()
+    try:
+        init_db()
+        db_logger.info("Database initialized successfully")
+    except Exception as e:
+        db_logger.error(f"Failed to initialize database: {str(e)}")
+        raise
     
     # Check initial state
     initial_state = check_database_state()
@@ -70,39 +81,47 @@ def run_pipeline():
     try:
         # 1. Run intelligent search
         logger.info("\n=== Step 1: Running Intelligent Search ===")
+        search_logger = loggers["search"]
+        search_logger.info("Starting intelligent search process")
         os.system("python agents/intelligent_search_agent.py")
         
         # Check state after search
         search_state = check_database_state()
         if search_state["search_results"] <= initial_state["search_results"]:
-            logger.warning("No new search results found. This might be normal if all results are duplicates.")
+            search_logger.warning("No new search results found. This might be normal if all results are duplicates.")
         else:
-            logger.info(f"Found {search_state['search_results'] - initial_state['search_results']} new search results")
+            search_logger.info(f"Found {search_state['search_results'] - initial_state['search_results']} new search results")
         
         # 2. Run web scraping
         logger.info("\n=== Step 2: Running Web Scraping ===")
+        scraping_logger = loggers["scraping"]
+        scraping_logger.info("Starting web scraping process")
         os.system("python agents/web_scraping_agent.py")
         
         # Check state after scraping
         scrape_state = check_database_state()
         if scrape_state["scraped_content"] <= initial_state["scraped_content"]:
-            logger.warning("No new scraped content found. This might be normal if all content was already scraped.")
+            scraping_logger.warning("No new scraped content found. This might be normal if all content was already scraped.")
         else:
-            logger.info(f"Found {scrape_state['scraped_content'] - initial_state['scraped_content']} new scraped content")
+            scraping_logger.info(f"Found {scrape_state['scraped_content'] - initial_state['scraped_content']} new scraped content")
         
         # 3. Run cleaning and validation
         logger.info("\n=== Step 3: Running Cleaning and Validation ===")
+        cleaning_logger = loggers["cleaning"]
+        cleaning_logger.info("Starting cleaning and validation process")
         os.system("python agents/cleaning_validation_agent.py")
         
         # Check state after cleaning
         clean_state = check_database_state()
         if clean_state["cleaned_content"] <= initial_state["cleaned_content"]:
-            logger.warning("No new cleaned content found. This might be normal if all content was already cleaned.")
+            cleaning_logger.warning("No new cleaned content found. This might be normal if all content was already cleaned.")
         else:
-            logger.info(f"Found {clean_state['cleaned_content'] - initial_state['cleaned_content']} new cleaned content")
+            cleaning_logger.info(f"Found {clean_state['cleaned_content'] - initial_state['cleaned_content']} new cleaned content")
         
         # 4. Run analysis
         logger.info("\n=== Step 4: Running Analysis ===")
+        analysis_logger = loggers["analysis"]
+        analysis_logger.info("Starting analysis process")
         os.system("python agents/analyst_agent.py")
         
         # Check final state

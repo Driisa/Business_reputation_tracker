@@ -9,7 +9,6 @@ sys.path.append(project_root)
 import json
 import os
 import argparse
-import logging
 import requests
 import time
 import re
@@ -19,14 +18,13 @@ from dotenv import load_dotenv
 from data.pipeline_db_config import SessionLocal
 from data.pipeline_db_models import SearchResult
 from data.company_repository import get_all_companies, get_company_by_id
+from logging_config import setup_logging
 
-# Configure logging
-logging.basicConfig(
-    level=logging.INFO,
-    format="%(asctime)s - %(levelname)s - %(message)s",
-    datefmt="%Y-%m-%d %H:%M:%S"
-)
-logger = logging.getLogger("intelligent_search")
+# Setup logging
+loggers = setup_logging()
+logger = loggers["search"]
+api_logger = loggers["api"]
+db_logger = loggers["database"]
 
 # Load environment variables
 load_dotenv()
@@ -46,6 +44,7 @@ def deduplicate_similar_content(results: List[Dict[str, Any]], threshold: float 
     if not results:
         return []
         
+    logger.info(f"Starting deduplication of {len(results)} results")
     unique_results = []
     seen_signatures = set()
     seen_normalized_urls = set()
@@ -61,6 +60,7 @@ def deduplicate_similar_content(results: List[Dict[str, Any]], threshold: float 
     
     # For domains with multiple results, we'll be more aggressive with deduplication
     common_domains = {domain for domain, count in domain_counts.items() if count > 1}
+    logger.debug(f"Found {len(common_domains)} domains with multiple results")
     
     # Function to compute text similarity
     def compute_similarity(text1, text2):
@@ -140,7 +140,7 @@ def deduplicate_similar_content(results: List[Dict[str, Any]], threshold: float 
         if not is_duplicate:
             unique_results.append(result)
     
-    logger.info(f"After content deduplication: {len(results)} results → {len(unique_results)} unique results")
+    logger.info(f"After content deduplication: {len(results)} results -> {len(unique_results)} unique results")
     return unique_results
 
 def enrich_company_info(company: Dict[str, Any]) -> Dict[str, Any]:
@@ -246,6 +246,7 @@ def search_company(
     """Search for a company and return unfiltered results from the last 7 day."""
     company_name = company.get("company_name", "").strip()
     if not company_name:
+        logger.warning("Empty company name provided")
         return None
 
     company_id = company.get("company_id") or company_name.replace(" ", "_")
@@ -448,6 +449,7 @@ def analyze_with_openai(prompt: str, api_key: str, model: str = "gpt-4.1-nano") 
     }
     
     try:
+        api_logger.info(f"Starting OpenAI analysis with model: {model}")
         response = requests.post(
             "https://api.openai.com/v1/chat/completions",
             headers=headers,
@@ -465,7 +467,7 @@ def analyze_with_openai(prompt: str, api_key: str, model: str = "gpt-4.1-nano") 
             analysis = json.loads(content)
         except json.JSONDecodeError:
             # If that fails, try to extract JSON portion using string manipulation
-            logger.warning("Full response was not valid JSON, attempting to extract JSON portion")
+            api_logger.warning("Full response was not valid JSON, attempting to extract JSON portion")
             json_start = content.find("{")
             json_end = content.rfind("}") + 1
             if json_start >= 0 and json_end > json_start:
@@ -473,20 +475,20 @@ def analyze_with_openai(prompt: str, api_key: str, model: str = "gpt-4.1-nano") 
                 try:
                     analysis = json.loads(json_str)
                 except json.JSONDecodeError:
-                    logger.error("Could not extract valid JSON from response")
+                    api_logger.error("Could not extract valid JSON from response")
                     return {"relevance_category": "UNKNOWN", "relevance_score": 0.0, 
                             "reasoning": "Error parsing response", "key_information": ""}
             else:
-                logger.error("No JSON object found in response")
+                api_logger.error("No JSON object found in response")
                 return {"relevance_category": "UNKNOWN", "relevance_score": 0.0, 
                         "reasoning": "Error parsing response", "key_information": ""}
                     
         return analysis
     
     except requests.exceptions.RequestException as e:
-        logger.error(f"API request error: {e}")
+        api_logger.error(f"API request error: {e}")
     except Exception as e:
-        logger.error(f"Error processing OpenAI response: {e}")
+        api_logger.error(f"Error processing OpenAI response: {e}")
     
     return {"relevance_category": "UNKNOWN", "relevance_score": 0.0, 
             "reasoning": "Error processing response", "key_information": ""}
@@ -743,91 +745,97 @@ def intelligent_search_process(
 
 def main():
     """Main function for intelligent search."""
-    parser = argparse.ArgumentParser(description='Intelligent Search with Post-Search Analysis')
-    parser.add_argument('--model', type=str, default='gpt-4.1-nano', help='OpenAI model to use')
-    parser.add_argument('--display-limit', type=int, default=10, help='Maximum number of results to display for each category')
-    parser.add_argument('--results-per-company', type=int, default=10, help='Number of search results to fetch per company')
-    parser.add_argument('--min-relevance', type=float, default=0.15, help='Minimum relevance score to keep result (0.0-1.0)')
-    parser.add_argument('--company', type=str, help='Process only this specific company (by name)')
-    parser.add_argument('--verbose', action='store_true', help='Enable verbose logging')
-    args = parser.parse_args()
-    
-    # Set logging level
-    if args.verbose:
-        logger.setLevel(logging.DEBUG)
-    
-    # Load companies from database
-    companies = get_companies_from_db(args.company)
-    if not companies:
-        logger.error("No companies found in database. Exiting.")
-        return
-    
-    # Run the intelligent search process
-    analyzed_results = intelligent_search_process(
-        companies,
-        openai_model=args.model,
-        display_limit=args.display_limit,
-        specific_company=args.company,
-        results_per_company=args.results_per_company,
-        min_relevance_score=args.min_relevance
-    )
-    
-    # Save analyzed results to database
-    if analyzed_results:
-        session = SessionLocal()
-        try:
-            new_results_count = 0
-            duplicate_results_count = 0
-            
-            for company_results in analyzed_results:
-                for category in ['highly_relevant', 'relevant', 'somewhat_relevant']:
-                    for result in company_results['categorized_results'][category]:
-                        # Check if this result already exists in the database
-                        existing_result = session.query(SearchResult).filter(
-                            SearchResult.link == result['link']
-                        ).first()
-                        
-                        if existing_result:
-                            duplicate_results_count += 1
-                            logger.debug(f"Skipping duplicate result: {result['title'][:50]}...")
-                            continue
-                        
-                        # Convert string date to Python date object if it exists
-                        published_date_str = result.get('published_date')
-                        published_date = None
-                        if published_date_str:
-                            try:
-                                published_date = datetime.strptime(published_date_str, '%Y-%m-%d').date()
-                            except (ValueError, TypeError):
-                                logger.warning(f"Invalid date format for {published_date_str}, setting to None")
-                        
-                        sr = SearchResult(
-                            company_id=company_results['company_id'],
-                            company_name=company_results['company_name'],
-                            title=result['title'],
-                            link=result['link'],
-                            snippet=result['snippet'],
-                            published_date=published_date,
-                            relevance_category=category,
-                            relevance_score=result['analysis'].get('relevance_score', 0.0),
-                            content_type=result['analysis'].get('content_type', ''),
-                            key_information=result['analysis'].get('key_information', ''),
-                            reasoning=result['analysis'].get('reasoning', ''),
-                            raw_json=result
-                        )
-                        session.add(sr)
-                        new_results_count += 1
-            
-            session.commit()
-            logger.info(f"Saved {new_results_count} new results to database")
-            if duplicate_results_count > 0:
-                logger.info(f"Skipped {duplicate_results_count} duplicate results")
-        except Exception as e:
-            session.rollback()
-            logger.error(f"Error saving results to database: {str(e)}")
-            raise
-        finally:
-            session.close()
+    try:
+        logger.info("Starting intelligent search process")
+        parser = argparse.ArgumentParser(description='Intelligent Search with Post-Search Analysis')
+        parser.add_argument('--model', type=str, default='gpt-4.1-nano', help='OpenAI model to use')
+        parser.add_argument('--display-limit', type=int, default=10, help='Maximum number of results to display for each category')
+        parser.add_argument('--results-per-company', type=int, default=10, help='Number of search results to fetch per company')
+        parser.add_argument('--min-relevance', type=float, default=0.15, help='Minimum relevance score to keep result (0.0-1.0)')
+        parser.add_argument('--company', type=str, help='Process only this specific company (by name)')
+        parser.add_argument('--verbose', action='store_true', help='Enable verbose logging')
+        args = parser.parse_args()
+        
+        # Set logging level
+        if args.verbose:
+            logger.setLevel(logging.DEBUG)
+        
+        # Load companies from database
+        companies = get_companies_from_db(args.company)
+        if not companies:
+            logger.error("No companies found in database. Exiting.")
+            return
+        
+        # Run the intelligent search process
+        analyzed_results = intelligent_search_process(
+            companies,
+            openai_model=args.model,
+            display_limit=args.display_limit,
+            specific_company=args.company,
+            results_per_company=args.results_per_company,
+            min_relevance_score=args.min_relevance
+        )
+        
+        # Save analyzed results to database
+        if analyzed_results:
+            session = SessionLocal()
+            try:
+                new_results_count = 0
+                duplicate_results_count = 0
+                
+                for company_results in analyzed_results:
+                    for category in ['highly_relevant', 'relevant', 'somewhat_relevant']:
+                        for result in company_results['categorized_results'][category]:
+                            # Check if this result already exists in the database
+                            existing_result = session.query(SearchResult).filter(
+                                SearchResult.link == result['link']
+                            ).first()
+                            
+                            if existing_result:
+                                duplicate_results_count += 1
+                                logger.debug(f"Skipping duplicate result: {result['title'][:50]}...")
+                                continue
+                            
+                            # Convert string date to Python date object if it exists
+                            published_date_str = result.get('published_date')
+                            published_date = None
+                            if published_date_str:
+                                try:
+                                    published_date = datetime.strptime(published_date_str, '%Y-%m-%d').date()
+                                except (ValueError, TypeError):
+                                    logger.warning(f"Invalid date format for {published_date_str}, setting to None")
+                            
+                            sr = SearchResult(
+                                company_id=company_results['company_id'],
+                                company_name=company_results['company_name'],
+                                title=result['title'],
+                                link=result['link'],
+                                snippet=result['snippet'],
+                                published_date=published_date,
+                                relevance_category=category,
+                                relevance_score=result['analysis'].get('relevance_score', 0.0),
+                                content_type=result['analysis'].get('content_type', ''),
+                                key_information=result['analysis'].get('key_information', ''),
+                                reasoning=result['analysis'].get('reasoning', ''),
+                                raw_json=result
+                            )
+                            session.add(sr)
+                            new_results_count += 1
+                
+                session.commit()
+                logger.info(f"Saved {new_results_count} new results to database")
+                if duplicate_results_count > 0:
+                    logger.info(f"Skipped {duplicate_results_count} duplicate results")
+            except Exception as e:
+                session.rollback()
+                logger.error(f"Error saving results to database: {str(e)}")
+                raise
+            finally:
+                session.close()
+
+    except Exception as e:
+        logger.error(f"Intelligent search process failed: {str(e)}")
+        raise
 
 if __name__ == "__main__":
     main()
