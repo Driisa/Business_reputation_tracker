@@ -1,0 +1,52 @@
+2025-05-21 10:55:42 - pipeline - INFO - Starting pipeline run...
+2025-05-21 10:55:42 - pipeline - INFO - Initializing database...
+2025-05-21 10:55:42 - database - INFO - Database initialized successfully
+2025-05-21 10:55:42 - database - INFO - Current database state:
+2025-05-21 10:55:42 - database - INFO - - Search Results: 23
+2025-05-21 10:55:42 - database - INFO - - Scraped Content: 23
+2025-05-21 10:55:42 - database - INFO - - Cleaned Content: 17
+2025-05-21 10:55:42 - database - INFO - - Analysis Results: 17
+2025-05-21 10:55:42 - pipeline - INFO - 
+=== Step 1: Running Intelligent Search ===
+2025-05-21 10:55:42 - search - INFO - Starting intelligent search process
+2025-05-21 10:56:22 - database - INFO - Current database state:
+2025-05-21 10:56:22 - database - INFO - - Search Results: 23
+2025-05-21 10:56:22 - database - INFO - - Scraped Content: 23
+2025-05-21 10:56:22 - database - INFO - - Cleaned Content: 17
+2025-05-21 10:56:22 - database - INFO - - Analysis Results: 17
+2025-05-21 10:56:22 - search - WARNING - No new search results found. This might be normal if all results are duplicates.
+2025-05-21 10:56:22 - pipeline - INFO - 
+=== Step 2: Running Web Scraping ===
+2025-05-21 10:56:22 - scraping - INFO - Starting web scraping process
+2025-05-21 10:56:22 - database - INFO - Current database state:
+2025-05-21 10:56:22 - database - INFO - - Search Results: 23
+2025-05-21 10:56:22 - database - INFO - - Scraped Content: 23
+2025-05-21 10:56:22 - database - INFO - - Cleaned Content: 17
+2025-05-21 10:56:22 - database - INFO - - Analysis Results: 17
+2025-05-21 10:56:22 - scraping - WARNING - No new scraped content found. This might be normal if all content was already scraped.
+2025-05-21 10:56:22 - pipeline - INFO - 
+=== Step 3: Running Cleaning and Validation ===
+2025-05-21 10:56:22 - cleaning - INFO - Starting cleaning and validation process
+2025-05-21 10:56:23 - database - INFO - Current database state:
+2025-05-21 10:56:23 - database - INFO - - Search Results: 23
+2025-05-21 10:56:23 - database - INFO - - Scraped Content: 23
+2025-05-21 10:56:23 - database - INFO - - Cleaned Content: 17
+2025-05-21 10:56:23 - database - INFO - - Analysis Results: 17
+2025-05-21 10:56:23 - cleaning - WARNING - No new cleaned content found. This might be normal if all content was already cleaned.
+2025-05-21 10:56:23 - pipeline - INFO - 
+=== Step 4: Running Analysis ===
+2025-05-21 10:56:23 - analysis - INFO - Starting analysis process
+2025-05-21 10:56:24 - database - INFO - Current database state:
+2025-05-21 10:56:24 - database - INFO - - Search Results: 23
+2025-05-21 10:56:24 - database - INFO - - Scraped Content: 23
+2025-05-21 10:56:24 - database - INFO - - Cleaned Content: 17
+2025-05-21 10:56:24 - database - INFO - - Analysis Results: 17
+2025-05-21 10:56:24 - pipeline - INFO - 
+=== Pipeline Statistics ===
+2025-05-21 10:56:24 - pipeline - INFO - Total duration: 41.31 seconds
+2025-05-21 10:56:24 - pipeline - INFO - New search results: 0
+2025-05-21 10:56:24 - pipeline - INFO - New scraped content: 0
+2025-05-21 10:56:24 - pipeline - INFO - New cleaned content: 0
+2025-05-21 10:56:24 - pipeline - INFO - New analysis results: 0
+2025-05-21 10:56:24 - pipeline - INFO - 
+Pipeline completed successfully!

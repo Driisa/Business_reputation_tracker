@@ -1,0 +1,115 @@
+2025-05-21 10:53:17 - pipeline - INFO - Starting pipeline run...
+2025-05-21 10:53:17 - pipeline - INFO - Initializing database...
+2025-05-21 10:53:17 - database - INFO - Database initialized successfully
+2025-05-21 10:53:17 - database - INFO - Current database state:
+2025-05-21 10:53:17 - database - INFO - - Search Results: 21
+2025-05-21 10:53:17 - database - INFO - - Scraped Content: 21
+2025-05-21 10:53:17 - database - INFO - - Cleaned Content: 16
+2025-05-21 10:53:17 - database - INFO - - Analysis Results: 16
+2025-05-21 10:53:17 - pipeline - INFO - 
+=== Step 1: Running Intelligent Search ===
+2025-05-21 10:53:17 - search - INFO - Starting intelligent search process
+2025-05-21 10:53:17 - search - INFO - Starting intelligent search process
+2025-05-21 10:53:17 - search - INFO - Searching for: Apple Inc. (last 7 days) - Page 1/2
+2025-05-21 10:53:18 - search - INFO -   Found 10 search results for Apple Inc.
+2025-05-21 10:53:18 - search - INFO - Starting deduplication of 10 results
+2025-05-21 10:53:18 - search - INFO - Analyzing 10 search results for Apple Inc....
+2025-05-21 10:53:18 - api - INFO - Starting OpenAI analysis with model: gpt-4.1-nano
+2025-05-21 10:53:20 - search - INFO -   Analyzed: 'Apple Inc. | History, Products, Headquar...' - RELEVANT (0.75) - Published: 2025-05-16
+2025-05-21 10:53:20 - api - INFO - Starting OpenAI analysis with model: gpt-4.1-nano
+2025-05-21 10:53:22 - search - INFO -   Analyzed: 'United States - Jobs - Careers at Apple' - IRRELEVANT (0.00) - Published: 2025-05-21
+2025-05-21 10:53:22 - api - INFO - Starting OpenAI analysis with model: gpt-4.1-nano
+2025-05-21 10:53:24 - search - INFO -   Analyzed: 'Litigation involving Apple Inc. - Wikipe...' - IRRELEVANT (0.00) - Published: 2025-05-16
+2025-05-21 10:53:25 - api - INFO - Starting OpenAI analysis with model: gpt-4.1-nano
+2025-05-21 10:53:26 - search - INFO -   Analyzed: 'Class Action Lawsuit Database' - IRRELEVANT (0.00) - Published: 2025-05-19
+2025-05-21 10:53:26 - api - INFO - Starting OpenAI analysis with model: gpt-4.1-nano
+2025-05-21 10:53:28 - search - INFO -   Analyzed: 'Apple Inc - Company Profile and News - B...' - IRRELEVANT (0.00) - Published: 2025-05-19
+2025-05-21 10:53:28 - api - INFO - Starting OpenAI analysis with model: gpt-4.1-nano
+2025-05-21 10:53:30 - search - INFO -   Analyzed: 'Apple Archives | PYMNTS.com' - RELEVANT (0.80) - Published: 2025-05-21
+2025-05-21 10:53:31 - api - INFO - Starting OpenAI analysis with model: gpt-4.1-nano
+2025-05-21 10:53:33 - search - INFO -   Analyzed: 'Latest News - Apple Developer' - RELEVANT (0.75) - Published: 2025-05-21
+2025-05-21 10:53:33 - api - INFO - Starting OpenAI analysis with model: gpt-4.1-nano
+2025-05-21 10:53:35 - search - INFO -   Analyzed: 'Apple Inc. (AAPL) Stock Price, News, Quo...' - IRRELEVANT (0.00) - Published: 2025-05-21
+2025-05-21 10:53:35 - api - INFO - Starting OpenAI analysis with model: gpt-4.1-nano
+2025-05-21 10:53:36 - search - INFO -   Analyzed: 'AAPL: Apple Inc Stock Price Quote - NASD...' - IRRELEVANT (0.00) - Published: 2025-05-21
+2025-05-21 10:53:37 - api - INFO - Starting OpenAI analysis with model: gpt-4.1-nano
+2025-05-21 10:53:39 - search - INFO -   Analyzed: 'AirPods Replacement, Repair, and Service...' - HIGHLY_RELEVANT (0.90) - Published: 2025-05-16
+2025-05-21 10:53:39 - search - INFO - Analysis summary for Apple Inc.:
+2025-05-21 10:53:39 - search - INFO -   Original results: 10
+2025-05-21 10:53:39 - search - INFO -   After filtering (min score 0.15): 4
+2025-05-21 10:53:39 - search - INFO -   Highly Relevant: 1
+2025-05-21 10:53:39 - search - INFO -   Relevant: 3
+2025-05-21 10:53:39 - search - INFO -   Somewhat Relevant: 0
+2025-05-21 10:53:39 - search - INFO -   Irrelevant: 0
+2025-05-21 10:53:39 - search - INFO - Searching for: Amazon.com Inc. (last 7 days) - Page 1/2
+2025-05-21 10:53:40 - search - INFO -   Found 10 search results for Amazon.com Inc.
+2025-05-21 10:53:40 - search - INFO - Starting deduplication of 10 results
+2025-05-21 10:53:40 - search - INFO - Analyzing 9 search results for Amazon.com Inc....
+2025-05-21 10:53:40 - api - INFO - Starting OpenAI analysis with model: gpt-4.1-nano
+2025-05-21 10:53:41 - search - INFO -   Analyzed: 'Amazon.com, Inc. (AMZN) Stock Price, New...' - IRRELEVANT (0.00) - Published: 2025-05-20
+2025-05-21 10:53:41 - api - INFO - Starting OpenAI analysis with model: gpt-4.1-nano
+2025-05-21 10:53:43 - search - INFO -   Analyzed: 'Jeff Bezos | Biography, Amazon, & Facts ...' - RELEVANT (0.70) - Published: 2025-05-16
+2025-05-21 10:53:43 - api - INFO - Starting OpenAI analysis with model: gpt-4.1-nano
+2025-05-21 10:53:45 - search - INFO -   Analyzed: 'Amazon Archives | PYMNTS.com' - RELEVANT (0.80) - Published: 2025-05-20
+2025-05-21 10:53:46 - api - INFO - Starting OpenAI analysis with model: gpt-4.1-nano
+2025-05-21 10:53:48 - search - INFO -   Analyzed: 'Chip War: The Fight for the World's Most...' - IRRELEVANT (0.00) - Published: 2025-05-20
+2025-05-21 10:53:48 - api - INFO - Starting OpenAI analysis with model: gpt-4.1-nano
+2025-05-21 10:53:50 - search - INFO -   Analyzed: 'AMZN Stock Quote Price and Forecast | CN...' - RELEVANT (0.80) - Published: 2025-05-18
+2025-05-21 10:53:50 - api - INFO - Starting OpenAI analysis with model: gpt-4.1-nano
+2025-05-21 10:53:52 - search - INFO -   Analyzed: 'Amazon Tours' - IRRELEVANT (0.00) - Published: 2025-05-19
+2025-05-21 10:53:53 - api - INFO - Starting OpenAI analysis with model: gpt-4.1-nano
+2025-05-21 10:53:54 - search - INFO -   Analyzed: 'Amazon Operations India' - RELEVANT (0.80) - Published: 2025-05-17
+2025-05-21 10:53:54 - api - INFO - Starting OpenAI analysis with model: gpt-4.1-nano
+2025-05-21 10:53:56 - search - INFO -   Analyzed: 'AMZN Stock Price | Amazon.com Inc. Stock...' - RELEVANT (0.80) - Published: 2025-05-21
+2025-05-21 10:53:56 - api - INFO - Starting OpenAI analysis with model: gpt-4.1-nano
+2025-05-21 10:53:58 - search - INFO -   Analyzed: 'Amazon Asks 9th Circ. To Flip 'Inadverte...' - IRRELEVANT (0.00) - Published: 2025-05-20
+2025-05-21 10:53:58 - search - INFO - Analysis summary for Amazon.com Inc.:
+2025-05-21 10:53:58 - search - INFO -   Original results: 9
+2025-05-21 10:53:58 - search - INFO -   After filtering (min score 0.15): 5
+2025-05-21 10:53:58 - search - INFO -   Highly Relevant: 0
+2025-05-21 10:53:58 - search - INFO -   Relevant: 5
+2025-05-21 10:53:58 - search - INFO -   Somewhat Relevant: 0
+2025-05-21 10:53:58 - search - INFO -   Irrelevant: 0
+2025-05-21 10:53:58 - search - INFO - Saved 2 new results to database
+2025-05-21 10:53:58 - search - INFO - Skipped 7 duplicate results
+2025-05-21 10:53:58 - database - INFO - Current database state:
+2025-05-21 10:53:58 - database - INFO - - Search Results: 23
+2025-05-21 10:53:58 - database - INFO - - Scraped Content: 21
+2025-05-21 10:53:58 - database - INFO - - Cleaned Content: 16
+2025-05-21 10:53:58 - database - INFO - - Analysis Results: 16
+2025-05-21 10:53:58 - search - INFO - Found 2 new search results
+2025-05-21 10:53:58 - pipeline - INFO - 
+=== Step 2: Running Web Scraping ===
+2025-05-21 10:53:58 - scraping - INFO - Starting web scraping process
+2025-05-21 10:54:06 - database - INFO - Current database state:
+2025-05-21 10:54:06 - database - INFO - - Search Results: 23
+2025-05-21 10:54:06 - database - INFO - - Scraped Content: 23
+2025-05-21 10:54:06 - database - INFO - - Cleaned Content: 16
+2025-05-21 10:54:06 - database - INFO - - Analysis Results: 16
+2025-05-21 10:54:06 - scraping - INFO - Found 2 new scraped content
+2025-05-21 10:54:06 - pipeline - INFO - 
+=== Step 3: Running Cleaning and Validation ===
+2025-05-21 10:54:06 - cleaning - INFO - Starting cleaning and validation process
+2025-05-21 10:54:06 - database - INFO - Current database state:
+2025-05-21 10:54:06 - database - INFO - - Search Results: 23
+2025-05-21 10:54:06 - database - INFO - - Scraped Content: 23
+2025-05-21 10:54:06 - database - INFO - - Cleaned Content: 17
+2025-05-21 10:54:06 - database - INFO - - Analysis Results: 16
+2025-05-21 10:54:06 - cleaning - INFO - Found 1 new cleaned content
+2025-05-21 10:54:06 - pipeline - INFO - 
+=== Step 4: Running Analysis ===
+2025-05-21 10:54:06 - analysis - INFO - Starting analysis process
+2025-05-21 10:54:16 - database - INFO - Current database state:
+2025-05-21 10:54:16 - database - INFO - - Search Results: 23
+2025-05-21 10:54:16 - database - INFO - - Scraped Content: 23
+2025-05-21 10:54:16 - database - INFO - - Cleaned Content: 17
+2025-05-21 10:54:16 - database - INFO - - Analysis Results: 17
+2025-05-21 10:54:16 - pipeline - INFO - 
+=== Pipeline Statistics ===
+2025-05-21 10:54:16 - pipeline - INFO - Total duration: 59.57 seconds
+2025-05-21 10:54:16 - pipeline - INFO - New search results: 2
+2025-05-21 10:54:16 - pipeline - INFO - New scraped content: 2
+2025-05-21 10:54:16 - pipeline - INFO - New cleaned content: 1
+2025-05-21 10:54:16 - pipeline - INFO - New analysis results: 1
+2025-05-21 10:54:16 - pipeline - INFO - 
+Pipeline completed successfully!

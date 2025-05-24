@@ -1,0 +1,65 @@
+2025-05-21 10:55:43 - search - INFO - Starting intelligent search process
+2025-05-21 10:55:43 - search - INFO - Searching for: Apple Inc. (last 7 days) - Page 1/2
+2025-05-21 10:55:44 - search - INFO -   Found 10 search results for Apple Inc.
+2025-05-21 10:55:44 - search - INFO - Starting deduplication of 10 results
+2025-05-21 10:55:44 - search - INFO - After content deduplication: 10 results -> 10 unique results
+2025-05-21 10:55:44 - search - INFO - Analyzing 10 search results for Apple Inc....
+2025-05-21 10:55:44 - api - INFO - Starting OpenAI analysis with model: gpt-4.1-nano
+2025-05-21 10:55:45 - search - INFO -   Analyzed: 'Apple Inc. | History, Products, Headquar...' - RELEVANT (0.75) - Published: 2025-05-16
+2025-05-21 10:55:45 - api - INFO - Starting OpenAI analysis with model: gpt-4.1-nano
+2025-05-21 10:55:47 - search - INFO -   Analyzed: 'United States - Jobs - Careers at Apple' - IRRELEVANT (0.00) - Published: 2025-05-21
+2025-05-21 10:55:47 - api - INFO - Starting OpenAI analysis with model: gpt-4.1-nano
+2025-05-21 10:55:48 - search - INFO -   Analyzed: 'Litigation involving Apple Inc. - Wikipe...' - IRRELEVANT (0.00) - Published: 2025-05-16
+2025-05-21 10:55:49 - api - INFO - Starting OpenAI analysis with model: gpt-4.1-nano
+2025-05-21 10:55:51 - search - INFO -   Analyzed: 'Class Action Lawsuit Database' - IRRELEVANT (0.00) - Published: 2025-05-19
+2025-05-21 10:55:51 - api - INFO - Starting OpenAI analysis with model: gpt-4.1-nano
+2025-05-21 10:55:52 - search - INFO -   Analyzed: 'Apple Inc - Company Profile and News - B...' - IRRELEVANT (0.00) - Published: 2025-05-19
+2025-05-21 10:55:52 - api - INFO - Starting OpenAI analysis with model: gpt-4.1-nano
+2025-05-21 10:55:54 - search - INFO -   Analyzed: 'Apple Archives | PYMNTS.com' - RELEVANT (0.80) - Published: 2025-05-20
+2025-05-21 10:55:55 - api - INFO - Starting OpenAI analysis with model: gpt-4.1-nano
+2025-05-21 10:55:57 - search - INFO -   Analyzed: 'Latest News - Apple Developer' - RELEVANT (0.75) - Published: 2025-05-21
+2025-05-21 10:55:57 - api - INFO - Starting OpenAI analysis with model: gpt-4.1-nano
+2025-05-21 10:55:58 - search - INFO -   Analyzed: 'Apple Inc. (AAPL) Stock Price, News, Quo...' - IRRELEVANT (0.00) - Published: 2025-05-21
+2025-05-21 10:55:58 - api - INFO - Starting OpenAI analysis with model: gpt-4.1-nano
+2025-05-21 10:56:00 - search - INFO -   Analyzed: 'AirPods Replacement, Repair, and Service...' - RELEVANT (0.80) - Published: 2025-05-16
+2025-05-21 10:56:01 - api - INFO - Starting OpenAI analysis with model: gpt-4.1-nano
+2025-05-21 10:56:03 - search - INFO -   Analyzed: 'Fever: Events & Tickets on the App Store' - IRRELEVANT (0.00) - Published: 2025-05-21
+2025-05-21 10:56:03 - search - INFO - Analysis summary for Apple Inc.:
+2025-05-21 10:56:03 - search - INFO -   Original results: 10
+2025-05-21 10:56:03 - search - INFO -   After filtering (min score 0.15): 4
+2025-05-21 10:56:03 - search - INFO -   Highly Relevant: 0
+2025-05-21 10:56:03 - search - INFO -   Relevant: 4
+2025-05-21 10:56:03 - search - INFO -   Somewhat Relevant: 0
+2025-05-21 10:56:03 - search - INFO -   Irrelevant: 0
+2025-05-21 10:56:03 - search - INFO - Searching for: Amazon.com Inc. (last 7 days) - Page 1/2
+2025-05-21 10:56:03 - search - INFO -   Found 10 search results for Amazon.com Inc.
+2025-05-21 10:56:03 - search - INFO - Starting deduplication of 10 results
+2025-05-21 10:56:03 - search - INFO - After content deduplication: 10 results -> 9 unique results
+2025-05-21 10:56:03 - search - INFO - Analyzing 9 search results for Amazon.com Inc....
+2025-05-21 10:56:03 - api - INFO - Starting OpenAI analysis with model: gpt-4.1-nano
+2025-05-21 10:56:05 - search - INFO -   Analyzed: 'Amazon.com, Inc. (AMZN) Stock Price, New...' - IRRELEVANT (0.00) - Published: 2025-05-20
+2025-05-21 10:56:05 - api - INFO - Starting OpenAI analysis with model: gpt-4.1-nano
+2025-05-21 10:56:06 - search - INFO -   Analyzed: 'Jeff Bezos | Biography, Amazon, & Facts ...' - RELEVANT (0.70) - Published: 2025-05-16
+2025-05-21 10:56:06 - api - INFO - Starting OpenAI analysis with model: gpt-4.1-nano
+2025-05-21 10:56:08 - search - INFO -   Analyzed: 'Amazon Archives | PYMNTS.com' - RELEVANT (0.80) - Published: 2025-05-20
+2025-05-21 10:56:09 - api - INFO - Starting OpenAI analysis with model: gpt-4.1-nano
+2025-05-21 10:56:11 - search - INFO -   Analyzed: 'Chip War: The Fight for the World's Most...' - IRRELEVANT (0.00) - Published: 2025-05-20
+2025-05-21 10:56:11 - api - INFO - Starting OpenAI analysis with model: gpt-4.1-nano
+2025-05-21 10:56:13 - search - INFO -   Analyzed: 'AMZN Stock Quote Price and Forecast | CN...' - RELEVANT (0.80) - Published: 2025-05-18
+2025-05-21 10:56:13 - api - INFO - Starting OpenAI analysis with model: gpt-4.1-nano
+2025-05-21 10:56:15 - search - INFO -   Analyzed: 'Amazon Tours' - IRRELEVANT (0.00) - Published: 2025-05-19
+2025-05-21 10:56:16 - api - INFO - Starting OpenAI analysis with model: gpt-4.1-nano
+2025-05-21 10:56:19 - search - INFO -   Analyzed: 'Amazon Operations India' - RELEVANT (0.75) - Published: 2025-05-17
+2025-05-21 10:56:19 - api - INFO - Starting OpenAI analysis with model: gpt-4.1-nano
+2025-05-21 10:56:20 - search - INFO -   Analyzed: 'AMZN Stock Price | Amazon.com Inc. Stock...' - RELEVANT (0.80) - Published: 2025-05-21
+2025-05-21 10:56:20 - api - INFO - Starting OpenAI analysis with model: gpt-4.1-nano
+2025-05-21 10:56:22 - search - INFO -   Analyzed: 'Amazon Asks 9th Circ. To Flip 'Inadverte...' - IRRELEVANT (0.00) - Published: 2025-05-20
+2025-05-21 10:56:22 - search - INFO - Analysis summary for Amazon.com Inc.:
+2025-05-21 10:56:22 - search - INFO -   Original results: 9
+2025-05-21 10:56:22 - search - INFO -   After filtering (min score 0.15): 5
+2025-05-21 10:56:22 - search - INFO -   Highly Relevant: 0
+2025-05-21 10:56:22 - search - INFO -   Relevant: 5
+2025-05-21 10:56:22 - search - INFO -   Somewhat Relevant: 0
+2025-05-21 10:56:22 - search - INFO -   Irrelevant: 0
+2025-05-21 10:56:22 - search - INFO - Saved 0 new results to database
+2025-05-21 10:56:22 - search - INFO - Skipped 9 duplicate results
