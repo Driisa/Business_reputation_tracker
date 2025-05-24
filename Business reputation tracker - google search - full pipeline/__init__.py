@@ -1,3 +1,0 @@
-"""
-Business reputation tracker package.
-""" 
