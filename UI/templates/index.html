@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Reputation Tracker</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --secondary: #3498db;
+            --accent: #e74c3c;
+            --dark: #2c3e50;
+            --light: #ecf0f1;
+            --positive: #2ecc71;
+            --negative: #e74c3c;
+            --neutral: #f1c40f;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--light);
+            display: flex;
+        }
+
+        .container {
+            width: 100%;
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .header {
+            text-align: left;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            margin-bottom: 20px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .section {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            margin-bottom: 20px;
+        }
+
+        .flex-container {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .filter-section {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .chart-section {
+            flex: 2;
+            min-width: 500px;
+        }
+
+        .title {
+            border-bottom: 2px solid #e0e6ed;
+            padding-bottom: 10px;
+            margin-top: 0;
+            margin-bottom: 20px;
+            color: var(--primary);
+        }
+
+        .filter-group {
+        margin-bottom: 20px;
+        padding: 15px;
+        background: #f8f9fa;
+        border-radius: 8px;
+        flex-shrink: 0;
+    }
+
+    .filter-group label {
+        display: block;
+        margin-bottom: 10px;
+        font-weight: bold;
+        color: var(--dark);
+    }
+
+    .filter-options {
+        max-height: calc(100vh - 400px);
+        overflow-y: auto;
+        padding-right: 10px;
+    }
+
+    .filter-options::-webkit-scrollbar {
+        width: 6px;
+    }
+
+    .filter-options::-webkit-scrollbar-track {
+        background: #f1f1f1;
+        border-radius: 3px;
+    }
+
+    .filter-options::-webkit-scrollbar-thumb {
+        background: var(--secondary);
+        border-radius: 3px;
+    }
+
+    .toggle-item {
+        display: flex;
+        align-items: center;
+        margin: 8px 0;
+        padding: 8px;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: all 0.2s ease;
+    }
+
+    .toggle-item:hover {
+        background: rgba(0,0,0,0.05);
+    }
+
+    .toggle-item.active {
+        background: var(--secondary);
+        color: white;
+    }
+
+    #apply-filters {
+        margin-top: auto;
+        padding: 12px;
+        background: var(--primary);
+        color: white;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        font-weight: bold;
+    }
+
+    #apply-filters:hover {
+        background: var(--secondary);
+    }
+
+        select, input[type="date"] {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        button {
+            width: 100%;
+            background-color: var(--secondary);
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .stats-row {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .stat-box {
+            flex: 1;
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        .stat-box h4 {
+            margin: 0;
+            font-size: 14px;
+        }
+
+        .stat-box p {
+            font-size: 24px;
+            font-weight: bold;
+            margin: 5px 0;
+        }
+
+        .table-container {
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: var(--primary);
+            color: white;
+        }
+
+        tr:nth-child(odd) {
+            background-color: var(--light);
+        }
+
+        .footer {
+            text-align: center;
+            color: var(--dark);
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    {% if session.get('company_name') %}
+    <div class="sidebar">
+        <button class="sidebar-toggle" id="sidebarToggle">
+            <i class="fas fa-chevron-left" id="toggleIcon"></i>
+        </button>
+        <h3 class="title">Filters</h3>
+        <div class="filter-group">
+            <label>Date Range:</label>
+            <input type="date" id="start-date">
+            <input type="date" id="end-date">
+        </div>
+        <div class="filter-group">
+            <label>Content Type:</label>
+            <div id="content-type-filter" class="checkbox-group"></div>
+        </div>
+        <div class="filter-group">
+            <label>Sentiment:</label>
+            <div id="sentiment-filter" class="checkbox-group"></div>
+        </div>
+        <button id="apply-filters">Apply Filters</button>
+    </div>
+
+    <div class="main-content">
+        <div id="dashboard-container" data-company="{{ session.get('company_name') }}">
+            <div class="header">
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <div>
+                        <h1>Company Mentions Dashboard</h1>
+                        <p>Track and analyze company mentions and sentiment across various sources</p>
+                        <h2>{{ session.get('company_name') }}</h2>
+                    </div>
+                    <a href="{{ url_for('api_key') }}" class="btn" style="background-color: var(--primary); color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none; transition: background-color 0.2s ease;">API Key Management</a>
+                </div>
+            </div>
+
+            <div class="section">
+                <h3 class="title">Overview</h3>
+                <div class="stats-row">
+                    <div class="stat-box">
+                        <h4>Total Mentions</h4>
+                        <p id="total-mentions">{{ company_mentions|length }}</p>
+                    </div>
+                    <div class="stat-box">
+                        <h4>Avg Sentiment</h4>
+                        <p id="avg-sentiment">{{ '%.2f'|format((company_mentions|sum(attribute='sentiment_score') / company_mentions|length) if company_mentions else 0.00) }}</p>
+                    </div>
+                </div>
+                <div id="content-type-chart"></div>
+            </div>
+
+            <div class="section">
+                <h3 class="title">Sentiment Trends</h3>
+                <div id="sentiment-time-graph"></div>
+            </div>
+
+            <div class="section">
+                <h3 class="title">Detailed Mentions</h3>
+                <div class="table-container">
+                    <table id="mentions-table">
+                        <thead>
+                            <tr>
+                                <th>Title</th>
+                                <th>Date</th>
+                                <th>Content Type</th>
+                                <th>Sentiment Score</th>
+                                <th>Sentiment</th>
+                                <th>View Summary</th>
+                                <th>Source URL</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for mention in company_mentions %}
+                            <tr class="clickable-row" data-summary="{{ mention.summary }}">
+                                <td>{{ mention.title }}</td>
+                                <td>{{ mention.published_date.strftime('%Y-%m-%d') }}</td>
+                                <td>{{ mention.content_type }}</td>
+                                <td>{{ '%.2f'|format(mention.sentiment_score) }}</td>
+                                <td>{{ mention.sentiment_label }}</td>
+                                <td><span class="view-summary-link">View Summary</span></td>
+                                <td><a href="{{ mention.url }}" target="_blank">View Source</a></td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+    
+            <div class="footer">
+                <p>Business Reputation Tracker © 2025</p>
+            </div>
+        </div>
+    </div>
+    {% else %}
+    <div class="sidebar">
+        <button class="sidebar-toggle" id="sidebarToggle">
+            <i class="fas fa-chevron-left" id="toggleIcon"></i>
+        </button>
+        <h3 class="title">Filters</h3>
+        <div class="filter-group">
+            <label>Date Range:</label>
+            <input type="date" id="start-date">
+            <input type="date" id="end-date">
+        </div>
+        <div class="filter-group">
+            <label>Content Type:</label>
+            <div id="content-type-filter" class="checkbox-group"></div>
+        </div>
+        <div class="filter-group">
+            <label>Sentiment:</label>
+            <div id="sentiment-filter" class="checkbox-group"></div>
+        </div>
+        <button id="apply-filters">Apply Filters</button>
+    </div>
+
+    <div class="main-content">
+        <div id="dashboard-container" data-company="{{ session.get('company_name') }}">
+            <div class="header">
+                <h1>Company Mentions Dashboard</h1>
+                <p>Track and analyze company mentions and sentiment across various sources</p>
+                <h2>{{ session.get('company_name') }}</h2>
+            </div>
+    {% endif %}
+    <script src="{{ url_for('static', filename='js/dashboard.js') }}"></script>
+</body>
+</html>
+<style>
+    /* Modal styles */
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 1000;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,0.5);
+    }
+
+    .modal-content {
+        background-color: #fefefe;
+        margin: 15% auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 80%;
+        max-width: 600px;
+        border-radius: 5px;
+    }
+
+    .close {
+        color: #aaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    .close:hover,
+    .close:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    .clickable-row {
+        cursor: pointer;
+    }
+
+    .clickable-row:hover {
+        background-color: #f5f5f5;
+    }
+
+    .sidebar {
+        position: fixed;
+        left: -240px;
+        top: 0;
+        width: 200px;
+        height: 100vh;
+        background-color: var(--light);
+        padding: 20px;
+        box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+        transition: left 0.3s ease;
+        overflow-y: auto;
+        z-index: 100;
+        border-radius: 0 8px 8px 0;
+    }
+
+    .sidebar.active {
+        transform: translateX(10);
+    }
+
+    .sidebar-toggle {
+        position: absolute;
+        right: 0px;
+        top: 0px;
+        background: var(--primary);
+        color: white;
+        border: none;
+        width: 40px;
+        height: 20px;
+        border-radius: 0 8px 8px 0;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 1001;
+        box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+        transition: background-color 0.2s ease;
+    }
+
+    .sidebar-toggle:hover {
+        background: var(--secondary);
+    }
+
+    .main-content {
+        margin-left: 20px;
+        padding: 20px;
+        transition: margin-left 0.3s ease;
+        width: calc(100% - 40px);
+    }
+
+    .main-content.shifted {
+        margin-left: 270px;
+    }
+</style>
+<!-- Modal for displaying article summary -->
+<div id="summaryModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h3>Article Summary</h3>
+        <p id="modalSummary"></p>
+    </div>
+</div>
+
+<script>
+// Get modal elements
+const modal = document.getElementById('summaryModal');
+const modalSummary = document.getElementById('modalSummary');
+const closeBtn = document.getElementsByClassName('close')[0];
+
+// Add click event to table rows
+document.querySelectorAll('.clickable-row').forEach(row => {
+    row.addEventListener('click', function() {
+        modalSummary.textContent = this.dataset.summary;
+        modal.style.display = 'block';
+    });
+});
+
+// Close modal when clicking the close button
+closeBtn.onclick = function() {
+    modal.style.display = 'none';
+}
+
+// Close modal when clicking outside
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = 'none';
+    }
+}
+
+// Sidebar toggle functionality
+const sidebar = document.querySelector('.sidebar');
+const mainContent = document.querySelector('.main-content');
+const sidebarToggle = document.getElementById('sidebarToggle');
+const toggleIcon = document.getElementById('toggleIcon');
+
+sidebarToggle.addEventListener('click', () => {
+    sidebar.classList.toggle('active');
+    if (sidebar.classList.contains('active')) {
+        mainContent.classList.add('shifted');
+        toggleIcon.classList.remove('fa-chevron-right');
+        toggleIcon.classList.add('fa-chevron-left');
+    } else {
+        mainContent.classList.remove('shifted');
+        toggleIcon.classList.remove('fa-chevron-left');
+        toggleIcon.classList.add('fa-chevron-right');
+    }
+});
+</script>
+<style>
+    /* Add styles for the summary link */
+    .view-summary-link {
+        color: var(--secondary);
+        cursor: pointer;
+        text-decoration: underline;
+    }
+    .view-summary-link:hover {
+        color: var(--primary);
+    }
+
+    .sidebar {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 300px;
+        height: 95vh;
+        background-color: var(--light);
+        padding: 10px;
+        box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+        transition: width 0.3s ease;
+        overflow-y: auto;
+        z-index: 1000;
+    }
+
+    .sidebar.collapsed {
+        width: 40px;
+        padding: 20px 10px;
+    }
+
+    .sidebar.collapsed .filter-group,
+    .sidebar.collapsed h3,
+    .sidebar.collapsed #apply-filters {
+        display: none;
+    }
+
+    .sidebar-toggle {
+        position: absolute;
+        right: 0px;
+        top: 0px;
+        background: var(--primary);
+        color: white;
+        border: none;
+        width: 30px;
+        height: 50px;
+        border-radius: 8px 0px 0px 8px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+        z-index: 1001;
+        box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+        transition: background-color 0.2s ease;
+    }
+
+    .sidebar-toggle:hover {
+        background: var(--secondary);
+    }
+
+    .main-content {
+        margin-left: 360px;
+        padding: 20px;
+        width: 85%;
+        transition: margin-left 0.3s ease;
+    }
+
+    .main-content.shifted {
+        margin-left: 350px;
+        width: calc(100% - 350px);
+    }
+</style>

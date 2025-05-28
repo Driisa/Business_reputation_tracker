@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Key Management</title>
+    <style>
+        .api-key-container {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .api-key-display {
+            background-color: #fff;
+            padding: 1rem;
+            border: 1px solid #dee2e6;
+            border-radius: 4px;
+            margin: 1rem 0;
+            word-break: break-all;
+            font-family: monospace;
+        }
+        .button-group {
+            margin: 1rem 0;
+            display: flex;
+            gap: 1rem;
+        }
+        .btn {
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+        .btn-primary {
+            background-color: #007bff;
+            color: white;
+        }
+        .btn-secondary {
+            background-color: #6c757d;
+            color: white;
+        }
+        .alert {
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 4px;
+        }
+        .alert-success {
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+        .alert-warning {
+            background-color: #fff3cd;
+            color: #856404;
+            border: 1px solid #ffeeba;
+        }
+    </style>
+</head>
+<body>
+    <div class="api-key-container">
+        <h1>API Key Management</h1>
+        
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                {% for category, message in messages %}
+                    <div class="alert alert-{{ category }}">{{ message }}</div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+
+        <div>
+            <h2>Your Current API Key</h2>
+            <div class="api-key-display" id="apiKey">{{ user.api_key }}</div>
+            
+            <div class="button-group">
+                <button class="btn btn-secondary" onclick="copyApiKey()">Copy API Key</button>
+                <form action="{{ url_for('regenerate_api_key') }}" method="post" style="display: inline;">
+                    <button type="submit" class="btn btn-primary">Regenerate API Key</button>
+                </form>
+                <a href="{{ url_for('index') }}" class="btn btn-secondary">Back to Dashboard</a>
+            </div>
+        </div>
+
+      
+    </div>
+
+    <script>
+        function copyApiKey() {
+            const apiKey = document.getElementById('apiKey').textContent;
+            navigator.clipboard.writeText(apiKey).then(function() {
+                alert('API Key copied to clipboard!');
+            }).catch(function(err) {
+                console.error('Failed to copy API Key:', err);
+                alert('Failed to copy API Key');
+            });
+        }
+    </script>
+</body>
+</html>
