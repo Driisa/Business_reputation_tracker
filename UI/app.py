@@ -86,12 +86,24 @@ class User(db.Model):
     email = db.Column(db.String(100), nullable=False, unique=True)
     password = db.Column(db.String(200), nullable=False)
     company_name = db.Column(db.String(100), nullable=False)
+    api_key = db.Column(db.String(64), unique=True)
     
     def __init__(self, name, email, password, company_name):
         self.name = name
         self.email = email
         self.password = password
         self.company_name = company_name
+        self.api_key = self._generate_api_key()
+    
+    def _generate_api_key(self):
+        import secrets
+        import hashlib
+        # Generate a random token
+        token = secrets.token_hex(16)
+        # Create a hash object using SHA-256
+        hash_object = hashlib.sha256(token.encode())
+        # Return the hexadecimal representation of the hash
+        return hash_object.hexdigest()
 
 
 
@@ -243,6 +255,91 @@ def index():
                 print(f"Failed to parse date for record {record.id}: {record.published_date}")   
     
     return render_template('index.html', user=current_user, company_mentions=company_mentions)
+
+@app.route('/api/company_mentions', methods=['GET'])
+def get_company_mentions():
+    # Get API key from request header
+    api_key = request.headers.get('X-API-Key')
+    if not api_key:
+        return jsonify({'error': 'API key is required'}), 401
+    
+    # Find user by API key
+    user = User.query.filter_by(api_key=api_key).first()
+    if not user:
+        return jsonify({'error': 'Invalid API key'}), 401
+    
+    # Get company mentions for the authenticated user's company
+    mentions = CompanyMention.query.filter_by(company_name=user.company_name).all()
+    
+    # Convert mentions to JSON-serializable format
+    mentions_data = [{
+        'id': mention.id,
+        'title': mention.title,
+        'url': mention.url,
+        'published_date': mention.published_date,
+        'content_type': mention.content_type,
+        'cleaned_text': mention.cleaned_text,
+        'sentiment_score': mention.sentiment_score,
+        'sentiment_label': mention.sentiment_label,
+        'analysis_text': mention.analysis_text,
+        'summary': mention.summary,
+        'last_updated': mention.last_updated
+    } for mention in mentions]
+    
+    return jsonify({
+        'company_name': user.company_name,
+        'mentions': mentions_data
+    })
+
+@app.route('/api_key')
+def api_key():
+    app_logger.info("API_KEY: Function called")
+    app_logger.info(f"API_KEY: Session data: {session}")
+    
+    # Check if user is logged in
+    if 'user_id' not in session:
+        app_logger.info("API_KEY: User not logged in, redirecting to login page")
+        return redirect(url_for('login'))
+    
+    # Get current user data
+    current_user = db.session.get(User, session['user_id'])
+    if not current_user:
+        app_logger.error('API_KEY: User not found in database')
+        return redirect(url_for('logout'))
+    
+    return render_template('api_key.html', user=current_user)
+
+@app.route('/regenerate_api_key', methods=['POST'])
+def regenerate_api_key():
+    app_logger.info("REGENERATE_API_KEY: Function called")
+    app_logger.info(f"REGENERATE_API_KEY: Session data: {session}")
+    
+    # Check if user is logged in
+    if 'user_id' not in session:
+        app_logger.warning("REGENERATE_API_KEY: User not logged in")
+        flash('Please log in to regenerate API key', 'error')
+        return redirect(url_for('login'))
+    
+    try:
+        # Get current user
+        current_user = db.session.get(User, session['user_id'])
+        if not current_user:
+            app_logger.error('REGENERATE_API_KEY: User not found in database')
+            return redirect(url_for('logout'))
+        
+        # Generate new API key
+        current_user.api_key = current_user._generate_api_key()
+        db.session.commit()
+        
+        app_logger.info(f"REGENERATE_API_KEY: Successfully regenerated API key for user {current_user.id}")
+        flash('API key regenerated successfully', 'success')
+        
+    except Exception as e:
+        db.session.rollback()
+        app_logger.error(f"REGENERATE_API_KEY: Error regenerating API key: {str(e)}")
+        flash('Error regenerating API key', 'error')
+    
+    return redirect(url_for('api_key'))
 
 if __name__ == '__main__':
     app_logger.info(f"URL Map: {app.url_map}")
