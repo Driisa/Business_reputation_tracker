@@ -1501,3 +1501,100 @@
 2025-05-27 18:25:42 [INFO] c:\Users\papav\Documents\University Work\Semester Project 2\Main\Business_reputation_tracker\UI\app.py:214 - INDEX: Session data: <SecureCookieSession {'_flashes': [('success', 'Login successful!')], 'company_name': 'Apple Inc.', 'user_id': 1, 'user_name': 'John Doe'}>
 2025-05-27 18:25:42 [INFO] C:\Users\papav\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:96 - 127.0.0.1 - - [27/May/2025 18:25:42] "GET / HTTP/1.1" 200 -
 2025-05-27 18:25:42 [INFO] C:\Users\papav\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:96 - 127.0.0.1 - - [27/May/2025 18:25:42] "[36mGET /static/js/dashboard.js HTTP/1.1[0m" 304 -
+2025-05-28 12:00:08 [INFO] c:\Users\papav\Documents\University Work\Semester Project 2\Main\Business_reputation_tracker\UI\app.py:41 - Session lifetime set to 1 day, 0:00:00
+2025-05-28 12:00:08 [INFO] c:\Users\papav\Documents\University Work\Semester Project 2\Main\Business_reputation_tracker\UI\app.py:42 - Session cookie settings: SECURE=False, HTTPONLY=True, SAMESITE=Lax
+2025-05-28 12:00:08 [INFO] c:\Users\papav\Documents\University Work\Semester Project 2\Main\Business_reputation_tracker\UI\app.py:43 - Session refresh each request: True
+2025-05-28 12:00:08 [INFO] c:\Users\papav\Documents\University Work\Semester Project 2\Main\Business_reputation_tracker\UI\app.py:242 - URL Map: Map([<Rule '/static/<filename>' (HEAD, GET, OPTIONS) -> static>,
+ <Rule '/add_user' (POST, OPTIONS) -> add_user>,
+ <Rule '/login' (HEAD, GET, POST, OPTIONS) -> login>,
+ <Rule '/logout' (HEAD, GET, OPTIONS) -> logout>,
+ <Rule '/' (HEAD, GET, OPTIONS) -> index>])
+2025-05-28 12:00:08 [INFO] C:\Users\papav\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:96 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-28 12:00:08 [INFO] C:\Users\papav\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:96 - [33mPress CTRL+C to quit[0m
+2025-05-28 12:00:12 [INFO] c:\Users\papav\Documents\University Work\Semester Project 2\Main\Business_reputation_tracker\UI\app.py:210 - INDEX: Function called
+2025-05-28 12:00:12 [INFO] c:\Users\papav\Documents\University Work\Semester Project 2\Main\Business_reputation_tracker\UI\app.py:211 - INDEX: Session data: <SecureCookieSession {'_flashes': [('success', 'Login successful!')], 'company_name': 'Apple Inc.', 'user_id': 1, 'user_name': 'John Doe'}>
+2025-05-28 12:00:12 [INFO] C:\Users\papav\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:96 - 127.0.0.1 - - [28/May/2025 12:00:12] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-05-28 12:00:12 [INFO] C:\Users\papav\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:96 - 127.0.0.1 - - [28/May/2025 12:00:12] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-05-28 12:00:13 [INFO] C:\Users\papav\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:96 - 127.0.0.1 - - [28/May/2025 12:00:13] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-05-28 12:00:13 [INFO] C:\Users\papav\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:96 - 127.0.0.1 - - [28/May/2025 12:00:13] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-05-28 12:00:13 [INFO] C:\Users\papav\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:96 - 127.0.0.1 - - [28/May/2025 12:00:13] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-05-28 12:00:32 [INFO] c:\Users\papav\Documents\University Work\Semester Project 2\Main\Business_reputation_tracker\UI\app.py:41 - Session lifetime set to 1 day, 0:00:00
+2025-05-28 12:00:32 [INFO] c:\Users\papav\Documents\University Work\Semester Project 2\Main\Business_reputation_tracker\UI\app.py:42 - Session cookie settings: SECURE=False, HTTPONLY=True, SAMESITE=Lax
+2025-05-28 12:00:32 [INFO] c:\Users\papav\Documents\University Work\Semester Project 2\Main\Business_reputation_tracker\UI\app.py:43 - Session refresh each request: True
+2025-05-28 12:00:32 [INFO] c:\Users\papav\Documents\University Work\Semester Project 2\Main\Business_reputation_tracker\UI\app.py:242 - URL Map: Map([<Rule '/static/<filename>' (HEAD, GET, OPTIONS) -> static>,
+ <Rule '/add_user' (POST, OPTIONS) -> add_user>,
+ <Rule '/login' (POST, HEAD, GET, OPTIONS) -> login>,
+ <Rule '/logout' (HEAD, GET, OPTIONS) -> logout>,
+ <Rule '/' (HEAD, GET, OPTIONS) -> index>])
+2025-05-28 12:00:32 [INFO] C:\Users\papav\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:96 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-28 12:00:32 [INFO] C:\Users\papav\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:96 - [33mPress CTRL+C to quit[0m
+2025-05-28 12:00:35 [INFO] c:\Users\papav\Documents\University Work\Semester Project 2\Main\Business_reputation_tracker\UI\app.py:210 - INDEX: Function called
+2025-05-28 12:00:35 [INFO] c:\Users\papav\Documents\University Work\Semester Project 2\Main\Business_reputation_tracker\UI\app.py:211 - INDEX: Session data: <SecureCookieSession {'_flashes': [('success', 'Login successful!')], 'company_name': 'Apple Inc.', 'user_id': 1, 'user_name': 'John Doe'}>
+2025-05-28 12:00:35 [INFO] C:\Users\papav\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:96 - 127.0.0.1 - - [28/May/2025 12:00:35] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-05-28 12:00:35 [INFO] C:\Users\papav\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:96 - 127.0.0.1 - - [28/May/2025 12:00:35] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-05-28 12:00:35 [INFO] C:\Users\papav\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:96 - 127.0.0.1 - - [28/May/2025 12:00:35] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-05-28 12:00:35 [INFO] C:\Users\papav\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:96 - 127.0.0.1 - - [28/May/2025 12:00:35] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-05-28 12:00:36 [INFO] C:\Users\papav\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:96 - 127.0.0.1 - - [28/May/2025 12:00:36] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-05-28 12:00:36 [INFO] c:\Users\papav\Documents\University Work\Semester Project 2\Main\Business_reputation_tracker\UI\app.py:141 - LOGIN: Function called
+2025-05-28 12:00:36 [INFO] c:\Users\papav\Documents\University Work\Semester Project 2\Main\Business_reputation_tracker\UI\app.py:142 - LOGIN: Request method: GET
+2025-05-28 12:00:36 [INFO] c:\Users\papav\Documents\University Work\Semester Project 2\Main\Business_reputation_tracker\UI\app.py:143 - LOGIN: Session before login: <SecureCookieSession {'_flashes': [('success', 'Login successful!')], 'company_name': 'Apple Inc.', 'user_id': 1, 'user_name': 'John Doe'}>
+2025-05-28 12:00:36 [INFO] c:\Users\papav\Documents\University Work\Semester Project 2\Main\Business_reputation_tracker\UI\app.py:144 - LOGIN: Session type: LocalProxy
+2025-05-28 12:00:36 [INFO] c:\Users\papav\Documents\University Work\Semester Project 2\Main\Business_reputation_tracker\UI\app.py:189 - LOGIN: Rendering login page
+2025-05-28 12:00:36 [INFO] C:\Users\papav\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:96 - 127.0.0.1 - - [28/May/2025 12:00:36] "GET /login HTTP/1.1" 200 -
+2025-05-28 12:00:37 [INFO] C:\Users\papav\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:96 - 127.0.0.1 - - [28/May/2025 12:00:37] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-05-28 12:00:38 [INFO] c:\Users\papav\Documents\University Work\Semester Project 2\Main\Business_reputation_tracker\UI\app.py:141 - LOGIN: Function called
+2025-05-28 12:00:38 [INFO] c:\Users\papav\Documents\University Work\Semester Project 2\Main\Business_reputation_tracker\UI\app.py:142 - LOGIN: Request method: POST
+2025-05-28 12:00:38 [INFO] c:\Users\papav\Documents\University Work\Semester Project 2\Main\Business_reputation_tracker\UI\app.py:143 - LOGIN: Session before login: <SecureCookieSession {'company_name': 'Apple Inc.', 'user_id': 1, 'user_name': 'John Doe'}>
+2025-05-28 12:00:38 [INFO] c:\Users\papav\Documents\University Work\Semester Project 2\Main\Business_reputation_tracker\UI\app.py:144 - LOGIN: Session type: LocalProxy
+2025-05-28 12:00:38 [INFO] c:\Users\papav\Documents\University Work\Semester Project 2\Main\Business_reputation_tracker\UI\app.py:149 - LOGIN: Login attempt for email: john@example.com
+2025-05-28 12:00:38 [INFO] c:\Users\papav\Documents\University Work\Semester Project 2\Main\Business_reputation_tracker\UI\app.py:159 - LOGIN: User found: True
+2025-05-28 12:00:38 [INFO] c:\Users\papav\Documents\University Work\Semester Project 2\Main\Business_reputation_tracker\UI\app.py:164 - LOGIN: Password verification successful for user ID: 1
+2025-05-28 12:00:38 [INFO] c:\Users\papav\Documents\University Work\Semester Project 2\Main\Business_reputation_tracker\UI\app.py:165 - LOGIN: Session before modification: <SecureCookieSession {'company_name': 'Apple Inc.', 'user_id': 1, 'user_name': 'John Doe'}>
+2025-05-28 12:00:38 [INFO] c:\Users\papav\Documents\University Work\Semester Project 2\Main\Business_reputation_tracker\UI\app.py:173 - LOGIN: Session after modification: <SecureCookieSession {'company_name': 'Apple Inc.', 'user_id': 1, 'user_name': 'John Doe'}>
+2025-05-28 12:00:38 [INFO] c:\Users\papav\Documents\University Work\Semester Project 2\Main\Business_reputation_tracker\UI\app.py:174 - LOGIN: Session permanent: False
+2025-05-28 12:00:38 [INFO] c:\Users\papav\Documents\University Work\Semester Project 2\Main\Business_reputation_tracker\UI\app.py:175 - LOGIN: Session modified flag: True
+2025-05-28 12:00:38 [INFO] c:\Users\papav\Documents\University Work\Semester Project 2\Main\Business_reputation_tracker\UI\app.py:176 - LOGIN: Session data set: user_id=1, user_name=John Doe, company_name=Apple Inc.
+2025-05-28 12:00:38 [INFO] c:\Users\papav\Documents\University Work\Semester Project 2\Main\Business_reputation_tracker\UI\app.py:177 - LOGIN: Session object details: ['_MutableMapping__marker', '__abstractmethods__', '__class__', '__class_getitem__', '__contains__', '__delattr__', '__delitem__', '__dict__', '__dir__', '__doc__', '__eq__', '__firstlineno__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__getstate__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__ior__', '__iter__', '__le__', '__len__', '__lt__', '__module__', '__ne__', '__new__', '__or__', '__reduce__', '__reduce_ex__', '__repr__', '__reversed__', '__ror__', '__setattr__', '__setitem__', '__sizeof__', '__slots__', '__static_attributes__', '__str__', '__subclasshook__', '__weakref__', '_abc_impl', 'accessed', 'clear', 'copy', 'fromkeys', 'get', 'items', 'keys', 'modified', 'new', 'on_update', 'permanent', 'pop', 'popitem', 'setdefault', 'update', 'values']
+2025-05-28 12:00:38 [INFO] c:\Users\papav\Documents\University Work\Semester Project 2\Main\Business_reputation_tracker\UI\app.py:180 - LOGIN: Redirecting to index page
+2025-05-28 12:00:38 [INFO] C:\Users\papav\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:96 - 127.0.0.1 - - [28/May/2025 12:00:38] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-05-28 12:00:38 [INFO] c:\Users\papav\Documents\University Work\Semester Project 2\Main\Business_reputation_tracker\UI\app.py:210 - INDEX: Function called
+2025-05-28 12:00:38 [INFO] c:\Users\papav\Documents\University Work\Semester Project 2\Main\Business_reputation_tracker\UI\app.py:211 - INDEX: Session data: <SecureCookieSession {'_flashes': [('success', 'Login successful!')], 'company_name': 'Apple Inc.', 'user_id': 1, 'user_name': 'John Doe'}>
+2025-05-28 12:00:38 [INFO] C:\Users\papav\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:96 - 127.0.0.1 - - [28/May/2025 12:00:38] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-05-28 12:00:38 [INFO] C:\Users\papav\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:96 - 127.0.0.1 - - [28/May/2025 12:00:38] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-05-28 12:00:39 [INFO] C:\Users\papav\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:96 - 127.0.0.1 - - [28/May/2025 12:00:39] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-05-28 12:00:39 [INFO] C:\Users\papav\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:96 - 127.0.0.1 - - [28/May/2025 12:00:39] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-05-28 12:01:09 [INFO] c:\Users\papav\Documents\University Work\Semester Project 2\Main\Business_reputation_tracker\UI\app.py:41 - Session lifetime set to 1 day, 0:00:00
+2025-05-28 12:01:09 [INFO] c:\Users\papav\Documents\University Work\Semester Project 2\Main\Business_reputation_tracker\UI\app.py:42 - Session cookie settings: SECURE=False, HTTPONLY=True, SAMESITE=Lax
+2025-05-28 12:01:09 [INFO] c:\Users\papav\Documents\University Work\Semester Project 2\Main\Business_reputation_tracker\UI\app.py:43 - Session refresh each request: True
+2025-05-28 12:01:09 [INFO] c:\Users\papav\Documents\University Work\Semester Project 2\Main\Business_reputation_tracker\UI\app.py:242 - URL Map: Map([<Rule '/static/<filename>' (OPTIONS, HEAD, GET) -> static>,
+ <Rule '/add_user' (POST, OPTIONS) -> add_user>,
+ <Rule '/login' (POST, HEAD, GET, OPTIONS) -> login>,
+ <Rule '/logout' (OPTIONS, HEAD, GET) -> logout>,
+ <Rule '/' (OPTIONS, HEAD, GET) -> index>])
+2025-05-28 12:01:09 [INFO] C:\Users\papav\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:96 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-28 12:01:09 [INFO] C:\Users\papav\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:96 - [33mPress CTRL+C to quit[0m
+2025-05-28 12:01:17 [INFO] c:\Users\papav\Documents\University Work\Semester Project 2\Main\Business_reputation_tracker\UI\app.py:210 - INDEX: Function called
+2025-05-28 12:01:17 [INFO] c:\Users\papav\Documents\University Work\Semester Project 2\Main\Business_reputation_tracker\UI\app.py:211 - INDEX: Session data: <SecureCookieSession {'_flashes': [('success', 'Login successful!')], 'company_name': 'Apple Inc.', 'user_id': 1, 'user_name': 'John Doe'}>
+2025-05-28 12:01:17 [INFO] C:\Users\papav\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:96 - 127.0.0.1 - - [28/May/2025 12:01:17] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-05-28 12:01:17 [INFO] C:\Users\papav\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:96 - 127.0.0.1 - - [28/May/2025 12:01:17] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-05-28 12:01:18 [INFO] C:\Users\papav\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:96 - 127.0.0.1 - - [28/May/2025 12:01:18] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-05-28 12:01:18 [INFO] C:\Users\papav\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:96 - 127.0.0.1 - - [28/May/2025 12:01:18] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-05-28 12:01:18 [INFO] C:\Users\papav\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:96 - 127.0.0.1 - - [28/May/2025 12:01:18] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-05-28 12:10:32 [INFO] c:\Users\papav\Documents\University Work\Semester Project 2\Main\Business_reputation_tracker\UI\app.py:41 - Session lifetime set to 1 day, 0:00:00
+2025-05-28 12:10:32 [INFO] c:\Users\papav\Documents\University Work\Semester Project 2\Main\Business_reputation_tracker\UI\app.py:42 - Session cookie settings: SECURE=False, HTTPONLY=True, SAMESITE=Lax
+2025-05-28 12:10:32 [INFO] c:\Users\papav\Documents\University Work\Semester Project 2\Main\Business_reputation_tracker\UI\app.py:43 - Session refresh each request: True
+2025-05-28 12:10:32 [INFO] c:\Users\papav\Documents\University Work\Semester Project 2\Main\Business_reputation_tracker\UI\app.py:248 - URL Map: Map([<Rule '/static/<filename>' (GET, HEAD, OPTIONS) -> static>,
+ <Rule '/add_user' (POST, OPTIONS) -> add_user>,
+ <Rule '/login' (GET, POST, HEAD, OPTIONS) -> login>,
+ <Rule '/logout' (GET, HEAD, OPTIONS) -> logout>,
+ <Rule '/' (GET, HEAD, OPTIONS) -> index>])
+2025-05-28 12:10:32 [INFO] C:\Users\papav\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:96 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-28 12:10:32 [INFO] C:\Users\papav\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:96 - [33mPress CTRL+C to quit[0m
+2025-05-28 12:10:37 [INFO] c:\Users\papav\Documents\University Work\Semester Project 2\Main\Business_reputation_tracker\UI\app.py:216 - INDEX: Function called
+2025-05-28 12:10:37 [INFO] c:\Users\papav\Documents\University Work\Semester Project 2\Main\Business_reputation_tracker\UI\app.py:217 - INDEX: Session data: <SecureCookieSession {'_flashes': [('success', 'Login successful!')], 'company_name': 'Apple Inc.', 'user_id': 1, 'user_name': 'John Doe'}>
+2025-05-28 12:10:37 [INFO] C:\Users\papav\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:96 - 127.0.0.1 - - [28/May/2025 12:10:37] "GET / HTTP/1.1" 200 -
+2025-05-28 12:10:37 [INFO] C:\Users\papav\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\_internal.py:96 - 127.0.0.1 - - [28/May/2025 12:10:37] "[36mGET /static/js/dashboard.js HTTP/1.1[0m" 304 -

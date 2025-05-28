@@ -49,6 +49,12 @@ instance_path = os.path.join(basedir, 'instance')
 # Configure SQLAlchemy with multiple databases
 app.config['SQLALCHEMY_DATABASE_URI'] = f'sqlite:///{os.path.join(instance_path, "database.db")}'
 
+# Add frontend database bind
+frontend_db_path = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'data', 'database', 'to_frontend.db')
+app.config['SQLALCHEMY_BINDS'] = {
+    'frontend': f'sqlite:///{frontend_db_path}'
+}
+
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 # Initialize SQLAlchemy
