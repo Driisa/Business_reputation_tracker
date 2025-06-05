@@ -48,9 +48,9 @@ The pipeline consists of modular agents for distinct tasks:
 ├── data/
 │   └── __pycache__/
 ├── database/
-│   ├── registered companies.db                 # Stores company information
-│   ├── SQL_intermediate.db              # Intermediate data storage
-│   ├── SQL_to_frontend.db               # Data for frontend display
+│   ├── companies.db - (registered companies.db)                 # Stores company information
+│   ├── object_store.db - (SQL_intermediate.db)              # Intermediate data storage
+│   ├── to_frontend.db - (SQL_to_frontend.db)               # Data for frontend display
 │   ├── __init__.py
 │   ├── company_repository.py
 │   ├── database_objekt_store.py
