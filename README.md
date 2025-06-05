@@ -1,12 +1,12 @@
 # Company Mentioning Tracker: Automated MLOps Pipeline for Real-Time Sentiment Monitoring
 
-This repository hosts the "Company Mentioning Tracker," an automated MLOps pipeline designed to monitor company sentiment across news media in real time. It uses open-source technologies and modern APIs to offer a transparent, scalable, and cost-effective solution for reputation management.
+This repository hosts the "Company Mentioning Tracker," An Automated Pipeline for Mentioning Monitoring Across Wed Sources. It uses open-source technologies and modern APIs to offer a transparent, scalable, and cost-effective solution for reputation management.
 
 ## Features
 
 - **Automated Data Ingestion**: Systematically acquires relevant online content from news media for target companies.
-- **Real-time Sentiment Analysis**: Utilizes Large Language Models (LLMs) to classify sentiment and extract rationale from news articles.
-- **Modular MLOps Pipeline**: Features an agent-based architecture for scalability, maintainability, and robust execution.
+- **Sentiment Analysis**: Utilizes Large Language Models (LLMs) to classify sentiment and extract rationale from news articles.
+- **Modular Pipeline**: Features an agent-based architecture for scalability, maintainability, and robust execution.
 - **Data Processing**: Includes cleaning and validation to transform raw content into structured, normalized text.
 - **Historical Trend Tracking**: Stores mentions in a structured database to track trends over time.
 - **User Interface (UI) & API Access**: Provides a dashboard for visual sentiment overview and an API for integration with BI tools.
@@ -24,9 +24,9 @@ The pipeline consists of modular agents for distinct tasks:
 - `analyst_agent.py` (performs sentiment analysis using LLMs)
 
 **Store**: 
-- `object_store.db` (for intermediate data)
-- `to_frontend.db` (frontend-ready data)
-- `companies.db` (registered companies)
+- `SQL_intermediate.db` (for intermediate data)
+- `SQL_to_frontend.db` (frontend-ready data)
+- `registered companies.db` (registered companies)
 
 **Orchestration**: 
 - `run_pipeline.py` coordinates the agents.
@@ -48,9 +48,9 @@ The pipeline consists of modular agents for distinct tasks:
 ├── data/
 │   └── __pycache__/
 ├── database/
-│   ├── companies.db                 # Stores company information
-│   ├── object_store.db              # Intermediate data storage
-│   ├── to_frontend.db               # Data for frontend display
+│   ├── registered companies.db                 # Stores company information
+│   ├── SQL_intermediate.db              # Intermediate data storage
+│   ├── SQL_to_frontend.db               # Data for frontend display
 │   ├── __init__.py
 │   ├── company_repository.py
 │   ├── database_objekt_store.py
